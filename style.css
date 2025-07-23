@@ -234,10 +234,6 @@ h2, h3, p {
 	--index: 3;
 }
 
-#card4 {
-	--index: 4;
-}
-
 .card {
 	position: sticky;
 	top: 20%;
