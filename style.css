@@ -3,6 +3,7 @@
     margin:0;
 	padding: 0;
 	border: 0;
+    box-sizing:border-box;
 }
 
 body{
@@ -32,9 +33,11 @@ h2, h3, p {
     position:sticky;
     height:0px;
     overflow: visible;
-    top:20%;
+    top:40%;
     width:max-content;
     margin-left:auto;
+    right: 5%;
+    z-index: 1;
 }
 
 #navbar2 {
@@ -42,18 +45,26 @@ h2, h3, p {
     top:-100%;
 }
 
+#navbar2 a {
+    color: #9ac6c5;
+}
+
 #title {
     min-height:100dvh;
+    display:flex;
+    margin:0;
+    align-items: center;
 }
 
 #title-content {
     color:#a5e6ba;
-    text-align:center;
-    padding:10%;
+    padding:5%;
+    margin: 0 auto;
+    overflow:auto;
 }
 
 #title h1{
-    font-size:1000%;
+    font-size:900%;
 }
 
 #title p{
@@ -89,6 +100,62 @@ h2, h3, p {
 #work, #connect {
     color: #a5e6ba;
     padding:5%;
+}
+
+#timeline {
+    position:relative;
+    /*max-width:1200;*/
+    margin: 0 auto;
+    color:#360568;
+}
+
+/*stick thing*/
+#timeline::after {
+    content: '';
+    position: absolute;
+    width:6px;
+    background-color:#a5e6ba;
+    top:0;
+    bottom:0;
+    left:50%;
+}
+
+#timeline .container {
+    padding: 10px 40px;
+    position: relative;
+    background-color:#360568;
+    width:50%;
+}
+
+/*circles on stick thing*/
+#timeline .container::after{
+    content: '';
+    position: absolute;
+    width: 25px;
+    height: 25px;
+    right: -16px;
+    top:10px;
+    border-radius:50%;
+    z-index:2;
+    background-color: #a5e6ba;
+}
+
+#timeline .left {
+    left: 0;
+}
+
+#timeline .right {
+    left: 50%;
+}
+
+#timeline .right::after {
+    left: -9px;
+}
+
+#timeline .content {
+    padding: 20px 20px;
+    background-color: #a5e6ba;
+    position: relative;
 }
 
 #websites {
