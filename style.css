@@ -4,6 +4,12 @@
 	padding: 0;
 	border: 0;
     box-sizing:border-box;
+
+    /*variables*/
+    --cards: 3;
+    --cardHeight: 80dvh;
+    --cardTopPadding: 1.5em; 
+    --cardMargin: 5dvw;
 }
 
 body{
@@ -29,6 +35,12 @@ h2, h3, p {
     font-family: "basic-sans", sans-serif;
 }
 
+#work, #connect {
+    color: #a5e6ba;
+    padding:5%;
+}
+
+/*------------------------------NAVBAR------------------------------*/
 #navbar {
     position:sticky;
     height:0px;
@@ -49,6 +61,7 @@ h2, h3, p {
     color: #9ac6c5;
 }
 
+/*------------------------------TITLE------------------------------*/
 #title {
     min-height:100dvh;
     display:flex;
@@ -71,6 +84,7 @@ h2, h3, p {
     font-size:300%;
 }
 
+/*------------------------------BIO------------------------------*/
 #bio {
     background-color:#a5e6ba;
     color: #360568;
@@ -96,12 +110,7 @@ h2, h3, p {
     overflow:hidden;
 }
 
-
-#work, #connect {
-    color: #a5e6ba;
-    padding:5%;
-}
-
+/*------------------------------TIMELINE------------------------------*/
 #timeline {
     position:relative;
     /*max-width:1200;*/
@@ -152,12 +161,20 @@ h2, h3, p {
     left: -9px;
 }
 
+/*the actual boxes*/
 #timeline .content {
     padding: 20px 20px;
     background-color: #a5e6ba;
     position: relative;
+    transition: all 0.3s ease-in-out;
 }
 
+#timeline .content:hover {
+    transform: scale(1.02, 1.02);
+    box-shadow: 5px 10px #9ac6c5;
+}
+
+/*------------------------------WEBSITES------------------------------*/
 #websites {
     background-color:#a5e6ba;
     color: #360568;
@@ -165,6 +182,12 @@ h2, h3, p {
     padding:5%;
 }
 
+#websitesTitle {
+    position:sticky;
+    top:5%;
+}
+
+/*
 #webimages {
     display: inline-block;
     margin:auto;
@@ -175,7 +198,83 @@ h2, h3, p {
     width: 30%;
     padding:1%;
 }
+*/
 
+.webimage{
+    width:50%;
+    padding:1%;
+    float: left;
+}
+
+#websites .container {
+    width:90%;
+    margin: 0 auto;
+}
+
+#websites #cards {
+    list-style:none;
+    padding-left:0;
+    display:grid;
+    grid-template-columns: 1fr;
+    grid-template-rows: repeat(var(--cards), var(--cardHeight));
+    gap: var(--cardMargin);
+    padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+    margin-bottom: var(--cardMargin);
+}
+
+#card1 {
+	--index: 1;
+}
+
+#card2 {
+	--index: 2;
+}
+
+#card3 {
+	--index: 3;
+}
+
+#card4 {
+	--index: 4;
+}
+
+.card {
+	position: sticky;
+	top: 20%;
+	padding-top: calc(var(--index) * var(--cardTopPadding));
+}
+
+#card1 .card-content {
+    background-color: #9ac6c5;
+}
+
+#card2 .card-content {
+    background-color: #7785ac;
+}
+
+#card3 .card-content {
+    background-color: #5b2a86;
+}
+
+.card-content {
+    padding: 30px;
+	border-radius: 50px;
+    height: var(--cardHeight);
+    /*
+	justify-content: center;
+    */
+    display: flex;
+    align-items: center;
+    text-align:left;
+	/*transition: all 0.5s;*/
+}
+
+.card-actual-content {
+    margin: 5%;
+    overflow:hidden;
+}
+
+/*------------------------------CONNECT------------------------------*/
 #connect {
     text-align:center;
 }
