@@ -1,22 +1,88 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
     <head>
+        <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
-        <title>Ellen's Universe</title>
+
+        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"> -->
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
+        
         <link href="style.css" rel="stylesheet" type="text/css" /> 
+        <link rel="stylesheet" href="https://use.typekit.net/ees8skm.css">
+        <link rel="stylesheet" href="https://use.typekit.net/xaa5jtj.css">
+        
+        <title>Ellen's Universe</title>
         <link rel="icon" href="./pictures/heart.png" type="image/png"> <!--INSERT ICON HERE-->
+
         <style>
             
         </style>
     </head>
     <body>
+        <div id="navbar">
+            <div id="navbar2">
+                <p><a onclick="scrollWindow('title')">◆ Home</a></p>
+                <p><a onclick="scrollWindow('bio')">◆ About</a></p>
+                <p><a onclick="scrollWindow('work')">◆ Work</a></p>
+                <p><a onclick="scrollWindow('websites')">◆ Websites</a></p>
+                <p><a onclick="scrollWindow('connect')">◆ Connect</a></p>
+            </div>
+        </div>
+
+        
         <div id="title">
-            <h1>Hey! I'm Ellen, and I create.</h1>
+            <div id="title-content">
+                <h1>Hey! I'm Ellen,</h1>
+                <br>
+                <p>and I love to <b>create</b> and to <b>understand the world</b>.</p>
+            </div>     
         </div>
 
         <div id="bio">
-            <body>I am a current undergraduate student at <b>Princeton University</b> studying <b>Computer and Electrical Engineering.</b></body>
-            <body><b>My current research interests</b> include quantum mechanics, quantum information science, and quantum computing. </body>
+            <img src="pictures/me.jpg" id="me">
+            <div id="bio-content">
+                <h1>About Me</h1>
+                <p>I am a current undergraduate student at <b>Princeton University</b> studying <b>Computer and Electrical Engineering.</b></p>
+                <p>My current <b>research interests</b> include quantum mechanics, quantum information science, and quantum computing. </p>
+            </div>
         </div>
+
+        <div id="work">
+            <h1>Highlighted Work Experiences</h1>
+            
+            <h2>2025-Present</h2>
+            <h3>Girls Who Code TA</h3>
+            <p>placeholder cause im lazy</p>
+
+            <h2>2023-2024</h2>
+            <h3>Quantum Mechanics Researcher at Argonne National Laboratory</h3>
+            <p>placeholder cause im lazy</p>
+
+            <h2>2022-2023</h2>
+            <h3>Particle Physics Researcher at Argonne National Laboratory</h3>
+            <p>placeholder cause im lazy</p>
+        </div>
+
+        <div id="websites">
+            <h1>Websites I've Created</h1>
+            <div id="webimages">
+                <img src="pictures/haapi.png" id="haapiweb">
+                <img src="pictures/major.png" id="majorweb">
+                <img src="pictures/heart.png" id="herartweb">
+            </div>
+        </div>
+
+        <div id="connect">
+            <h1>Let's Connect!</h1>
+            <a href="https://www.linkedin.com/in/ellen-g-84b555248/" class="bi bi-linkedin" target="_blank"></a>
+            <a href="mailto:ellguan.ms@gmail.com" target="_blank" class="bi bi-envelope"></a>
+            <a href="https://github.com/ellguan" target="_blank" class="bi bi-github"></a>
+        </div>
+
+        <div id="footer"><p>Created with <i class="bi bi-heart-fill"></i> &copy; 2025 ◆ <a href="credits.html">Credits</a></p></div>
+        <br>
+
+        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
+        <script src="script.js"></script>
     </body>
 </html>

@@ -1,6 +1,134 @@
+* {
+    scrollbar-color: #a5e6ba #360568;
+    margin:0;
+	padding: 0;
+	border: 0;
+}
+
 body{
-    background-color:#090018;
+    background-color:#360568;
 }
+
+a {
+    color:#a5e6ba;
+    cursor:pointer;
+    transition-duration:.4s;
+    text-decoration: none;
+}
+
+a:hover {
+    color: #7785ac;
+}
+
 h1{
-    color:#efd8fc;
+    font-family: "kewl-script", sans-serif;
 }
+
+h2, h3, p {
+    font-family: "basic-sans", sans-serif;
+}
+
+#navbar {
+    position:sticky;
+    height:0px;
+    overflow: visible;
+    top:20%;
+    width:max-content;
+    margin-left:auto;
+}
+
+#navbar2 {
+    position: relative; 
+    top:-100%;
+}
+
+#title {
+    min-height:100dvh;
+}
+
+#title-content {
+    color:#a5e6ba;
+    text-align:center;
+    padding:10%;
+}
+
+#title h1{
+    font-size:1000%;
+}
+
+#title p{
+    font-size:300%;
+}
+
+#bio {
+    background-color:#a5e6ba;
+    color: #360568;
+    text-align:left;
+    padding:5%;
+}
+
+#bio p {
+    font-size:150%;
+}
+
+#bio h1, #work h1, #websites h1, #connect h1 {
+    font-size:500%;
+}
+
+#me {
+    width:400px;
+    float:left;
+}
+
+#bio-content {
+    padding:5%;
+    overflow:hidden;
+}
+
+
+#work, #connect {
+    color: #a5e6ba;
+    padding:5%;
+}
+
+#websites {
+    background-color:#a5e6ba;
+    color: #360568;
+    text-align:center;
+    padding:5%;
+}
+
+#webimages {
+    display: inline-block;
+    margin:auto;
+}
+
+#haapiweb, #majorweb, #herartweb {
+    float:left;
+    width: 30%;
+    padding:1%;
+}
+
+#connect {
+    text-align:center;
+}
+
+#connect .bi {
+    font-size:300%;
+    padding:2%;
+}
+
+#footer {
+    text-align:center;
+    color:#a5e6ba
+}
+
+/*
+COLOR PALETTE FOR NOW:
+purple1: #360568
+purple2: #5b2a86
+blue1: #7785ac
+blue2: #9ac6c5
+green: #a5e6ba
+
+*/
