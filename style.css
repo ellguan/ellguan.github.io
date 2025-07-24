@@ -77,6 +77,25 @@ ul.diamond {
 .active.fade.slideRight {
   animation: slideRight 1s ease-in;
 }
+/*linear-gradient(90deg, #7785ac, #360568, #a5e6ba);*/
+.highlight {
+    background-image: linear-gradient(to right, transparent, #7785ac);
+    background-size: 200% 100%;
+    background-position: 0;
+    animation-name: myhighlight;
+    animation-fill-mode: forwards;
+    animation-duration: 3s;
+    padding: 0.1em 0.2em;
+    border-radius: 0.3em;
+}
+
+.highlight.first {
+    animation-delay: 0.5s;
+}
+
+.highlight.second {
+    animation-delay: 1.5s;
+}
 
 @keyframes fade {
   0% {
@@ -119,6 +138,17 @@ ul.diamond {
         opacity: 1;
     }
 }
+
+@keyframes myhighlight {
+    from {
+      background-position: 0;
+    }
+
+    to {
+      background-position: -100%;
+    }
+}
+
 
 /*------------------------------NAVBAR------------------------------*/
 #navbar {
