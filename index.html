@@ -40,70 +40,80 @@
         </div>
 
         <div id="bio" class="solid">
-            <img src="pictures/me.jpg" id="me">
-            <div id="bio-content">
-                <h1>About Me</h1>
-                <p>I am a current undergraduate student at <b>Princeton University</b> studying <b>Computer and Electrical Engineering.</b></p>
-                <p>My current <b>research interests</b> include quantum mechanics, quantum information science, and quantum computing. </p>
+            <div id="fade">
+                <img src="pictures/me.jpg" id="me" class="fade">
+                <div id="bio-content">
+                    <h1 class="fade slideLeft">About Me</h1>
+                    <p class="fade slideRight">I am a current undergraduate student at <b>Princeton University</b> studying <b>Computer and Electrical Engineering.</b></p>
+                    <p class="fade slideRight">My current <b>research interests</b> include quantum mechanics, quantum information science, and quantum computing. </p>
+                </div>
             </div>
         </div>
 
         <div id="work" class="transparent">
-            <h1>Highlighted Work Experiences</h1>
+            <h1 class="fade slideUp">Highlighted Work Experiences</h1>
             <br>
             <div id="timeline">
                 <div class="container left">
                     <div class="content">
-                        <h2>2025-Present</h2>
-                        <h3>Girls Who Code Teaching Assistant</h3>
-                        <ul class="diamond">
-                            <li> Taught sections of game design principles and fundamentals during the 2025 Girls Who Code Summer Immersion Program </li>
-                            <li> Lead and mentored groups of high school girls through their development of learning the basics of programming</li>
-                            <li> Inspires students as a role model, encouraging sisterhood, and showcasing how their projects can make a difference in the world</li>
-                        </ul>
+                        <div class="fade">
+                            <h3>2025-Present</h3>
+                            <h2>Girls Who Code Teaching Assistant</h2>
+                            <ul class="diamond">
+                                <li> Taught sections of game design principles and fundamentals during the 2025 Girls Who Code Summer Immersion Program </li>
+                                <li> Lead and mentored groups of high school girls through their development of learning the basics of programming</li>
+                                <li> Inspires students as a role model, encouraging sisterhood, and showcasing how their projects can make a difference in the world</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="container right">
                     <div class="content">
-                        <h2>2023-2024</h2>
-                        <h3>Quantum Mechanics Researcher at Argonne National Laboratory</h3>
-                        <ul class="diamond">
-                            <li> Analyzed multiple research papers on quantum entanglement and the geometric measurement of entanglement</li>
-                            <li> Wrote a literature review about the history of the measurement and how it is understood for arbitrary two-qubit pure states, two-qubit mixed states, and certain multipartite mixed states.</li>
-                        </ul>
+                        <div class="fade">
+                            <h3>2023-2024</h3>
+                            <h2>Quantum Mechanics Researcher at Argonne National Laboratory</h2>
+                            <ul class="diamond">
+                                <li> Analyzed multiple research papers on quantum entanglement and the geometric measurement of entanglement</li>
+                                <li> Wrote a literature review about the history of the measurement and how it is understood for arbitrary two-qubit pure states, two-qubit mixed states, and certain multipartite mixed states.</li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
                 <div class="container left">
                     <div class="content">
-                        <h2>2022-2023</h2>
-                        <h3>Particle Physics Researcher at Argonne National Laboratory</h3>
-                        <ul class="diamond">
-                            <li> Developed Python algorithms to simulate various factors affecting the observed seasonal variation in multiple-muon events</li>
-                            <li> Created a large-scale data visualization program using the Matplotlib library to analyze and compare simulation results with experimental data from particle accelerators</li>
-                            <li> My research paper can be found <a href="https://arxiv.org/abs/2310.10009" target="_blank">here</a></li>
-                        </ul>
+                        <div class="fade">
+                            <h3>2022-2023</h3>
+                            <h2>Particle Physics Researcher at Argonne National Laboratory</h2>
+                            <ul class="diamond">
+                                <li> Developed Python algorithms to simulate various factors affecting the observed seasonal variation in multiple-muon events</li>
+                                <li> Created a large-scale data visualization program using the Matplotlib library to analyze and compare simulation results with experimental data from particle accelerators</li>
+                                <li> My research paper can be found <a href="https://arxiv.org/abs/2310.10009" target="_blank">here</a></li>
+                            </ul>
+                        </div>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="skills" class="solid">
-            <h1>My Skills</h1>
-            <i class="fa-brands fa-python skill"></i>
-            <i class="fa-brands fa-java skill"></i>
-            <i class="fa-brands fa-js skill"></i>
-            <i class="fa-brands fa-html5 skill"></i>
-            <i class="fa-brands fa-css3-alt skill"></i>
-            <i class="fa-solid fa-database skill"></i>
-            <i class="fa-brands fa-git-alt skill"></i>
-            <i class="fa-brands fa-php skill"></i>
-            <!-- add C, C#, and assembly-->
+            <h1 class="fade slideLeft">My Skills</h1>
+            <div class="fade slideRight">
+                <i class="fa-brands fa-python skill"></i>
+                <i class="fa-brands fa-java skill"></i>
+                <i class="fa-brands fa-js skill"></i>
+                <i class="fa-brands fa-html5 skill"></i>
+                <i class="fa-brands fa-css3-alt skill"></i>
+                <i class="fa-solid fa-database skill"></i>
+                <i class="fa-brands fa-git-alt skill"></i>
+                <i class="fa-brands fa-php skill"></i>
+                <!-- add C, C#, and assembly-->
+            </div>
 
         </div>
 
         <div id="websites" class="transparent">
             <br id="websitesBr">
-            <h1 id="websitesTitle">Websites I've Created</h1>
+            <h1 id="websitesTitle" class="fade slideUp">Websites I've Created</h1>
 
             <!--
             <div id="webimages">
@@ -118,40 +128,51 @@
                 <ul id="cards">
                     <li class="card" id="card1">
                         <div class="card-content">
-                            <img src="pictures/haapi.png" class="webimage">
-                            <div class="card-actual-content">
-                                <h2>Be HAAPI, Eat Noodles</h2>
-                                <ul class="diamond">
-                                    <li> Simulates an online AAPI noodle shop experience for the Future Business Leaders of America (FBLA) event Website Design</li>
-                                    <li> Created with HTML, CSS, JavaScript, PHP, and SQL</li>
-                                    <li> Won 10th place during the 2023 FBLA National Leadership Conference</li>
-                                </ul>
-                            </div> 
+                            <div class="fade">
+                                <img src="pictures/haapi.png" class="webimage" onclick="window.open('https://behaapieatnoodles.great-site.net/', '_blank');">
+                                <!-- <img src="pictures/haapi.gif" class="webgif"> -->
+                                <div class="card-actual-content">
+                                    <h2>Be HAAPI, Eat Noodles</h2>
+                                    <ul class="diamond">
+                                        <li> Simulates an online AAPI noodle shop experience for the Future Business Leaders of America (FBLA) event Website Design</li>
+                                        <li> Created with HTML, CSS, JavaScript, PHP, and SQL</li>
+                                        <li> Won 10th place during the 2023 FBLA National Leadership Conference</li>
+                                    </ul>
+                                    <p>Click on the image to visit the website!</p>
+                                </div> 
+                            </div>
+                            
                         </div>
                     </li>
                     <li class="card" id="card2">
                         <div class="card-content">
-                            <img src="pictures/heart.png" class="webimage">
-                            <div class="card-actual-content">
-                                <h2>Her Art of Theory</h2>
-                                <ul class="diamond">
-                                    <li> A platform spreading awareness on the gender gap in STEM jobs</li>
-                                    <li> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</li>
-                                    <li> Developed using HTML, CSS, and JavaScript</li>
-                                </ul>
+                            <div class="fade">
+                                <img src="pictures/heart.png" class="webimage" onclick="window.open('https://ellguan.github.io/herartoftheory/', '_blank')">
+                                <div class="card-actual-content">
+                                    <h2>Her Art of Theory</h2>
+                                    <ul class="diamond">
+                                        <li> A platform spreading awareness on the gender gap in STEM jobs</li>
+                                        <li> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</li>
+                                        <li> Developed using HTML, CSS, and JavaScript</li>
+                                    </ul>
+                                    <p>Click on the image to visit the website!</p>
+                                </div>
                             </div>
                         </div>
                     </li>
                     <li class="card" id="card3">
                         <div class="card-content">
-                            <img src="pictures/major.png" class="webimage">
-                            <div class="card-actual-content">
-                                <h2>What Major Are You?</h2>
-                                <ul class="diamond">
-                                    <li> A for-fun personality quiz</li>
-                                    <li> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</li>
-                                    <li> Created using HTML, CSS, and JavaScript</li>
-                                </ul>
+                            <div class="fade">
+                                <img src="pictures/major.png" class="webimage" onclick="window.open('https://ellguan.github.io/what-major-are-you/', '_blank');">
+                                <div class="card-actual-content">
+                                    <h2>What Major Are You?</h2>
+                                    <ul class="diamond">
+                                        <li> A for-fun personality quiz</li>
+                                        <li> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</li>
+                                        <li> Created using HTML, CSS, and JavaScript</li>
+                                    </ul>
+                                    <p>Click on the image to visit the website!</p>
+                                </div>
                             </div>
                         </div>
                     </li>
@@ -166,13 +187,15 @@
         </div>
 
         <div id="connect" class="transparent">
-            <h1>Let's Connect!</h1>
-            <a href="https://www.linkedin.com/in/ellen-g-84b555248/" class="bi bi-linkedin" target="_blank"></a>
-            <a href="mailto:ellguan.ms@gmail.com" target="_blank" class="bi bi-envelope"></a>
-            <a href="https://github.com/ellguan" target="_blank" class="bi bi-github"></a>
+            <div class="fade">
+                <h1 >Let's Connect!</h1>
+                <a href="https://www.linkedin.com/in/ellen-g-84b555248/" class="bi bi-linkedin" target="_blank"></a>
+                <a href="mailto:ellguan.ms@gmail.com" target="_blank" class="bi bi-envelope"></a>
+                <a href="https://github.com/ellguan" target="_blank" class="bi bi-github"></a>
+            </div>
         </div>
 
-        <div id="footer"><p>Created with <i class="bi bi-heart-fill"></i> &copy; 2025 ◆ <a href="credits.html">Credits</a></p></div>
+        <div id="footer"><p>Created with <i class="bi bi-heart-fill"></i> by Ellen Guan &copy; 2025 ◆ <a href="credits.html">Credits</a></p></div>
         <br>
 
         <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
