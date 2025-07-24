@@ -28,16 +28,34 @@ a:hover {
 }
 
 h1{
-    font-family: "kewl-script", sans-serif;
+    /*font-family: "bd-colonius", sans-serif;*/
+    font-size:500%;
+    font-family: "omnium", sans-serif;
+    font-weight: 700;
 }
 
-h2, h3, p {
-    font-family: "basic-sans", sans-serif;
+h2, h3, p, ul {
+    font-family: "futura-pt", sans-serif;
 }
 
-#work, #connect {
-    color: #a5e6ba;
+
+ul.diamond {
+    list-style-type: "◆";
+    margin-left: 15px;
+}
+
+.solid, .transparent {
     padding:5%;
+}
+
+.solid {
+    background-color:#a5e6ba;
+    color: #360568;
+    padding:5%;
+}
+
+.transparent {
+    color: #a5e6ba;
 }
 
 /*------------------------------NAVBAR------------------------------*/
@@ -48,7 +66,7 @@ h2, h3, p {
     top:40%;
     width:max-content;
     margin-left:auto;
-    right: 5%;
+    right: 2%;
     z-index: 1;
 }
 
@@ -85,19 +103,8 @@ h2, h3, p {
 }
 
 /*------------------------------BIO------------------------------*/
-#bio {
-    background-color:#a5e6ba;
-    color: #360568;
-    text-align:left;
-    padding:5%;
-}
-
 #bio p {
     font-size:150%;
-}
-
-#bio h1, #work h1, #websites h1, #connect h1 {
-    font-size:500%;
 }
 
 #me {
@@ -110,7 +117,7 @@ h2, h3, p {
     overflow:hidden;
 }
 
-/*------------------------------TIMELINE------------------------------*/
+/*------------------------------WORK------------------------------*/
 #timeline {
     position:relative;
     /*max-width:1200;*/
@@ -174,13 +181,18 @@ h2, h3, p {
     box-shadow: 5px 10px #9ac6c5;
 }
 
-/*------------------------------WEBSITES------------------------------*/
-#websites {
-    background-color:#a5e6ba;
-    color: #360568;
-    text-align:center;
-    padding:5%;
+#timeline a {
+    color: #7785ac;
 }
+
+/*-------------------------------SKILLS------------------------------*/
+.skill {
+    transition: all 0.3s ease-in-out;
+}
+.skill:hover{
+    transform: scale(1.1,1.1);
+}
+/*------------------------------WEBSITES------------------------------*/
 
 #websitesTitle {
     position:sticky;
@@ -230,6 +242,10 @@ h2, h3, p {
 	--index: 2;
 }
 
+#card1, #card2 {
+    color:#360568;
+}
+
 #card3 {
 	--index: 3;
 }
@@ -250,6 +266,10 @@ h2, h3, p {
 
 #card3 .card-content {
     background-color: #5b2a86;
+}
+
+.card h2 {
+    font-size: 300%;
 }
 
 .card-content {
@@ -275,7 +295,7 @@ h2, h3, p {
     text-align:center;
 }
 
-#connect .bi {
+#connect .bi, #skills .skill {
     font-size:300%;
     padding:2%;
 }
