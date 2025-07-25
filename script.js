@@ -28,9 +28,11 @@ function fadein() {
 
 window.addEventListener("scroll", fadein);
 
-// hides that one pesky heading 
+
 function hide(){
     var windowHeight = window.innerHeight;
+
+    // hides that one pesky heading
     var webTitle = document.getElementById("websitesTitle");
     var card3 = document.getElementById("card3");
     var cardBottom = card3.getBoundingClientRect().bottom;
@@ -40,6 +42,13 @@ function hide(){
     }
     else {
         webTitle.style.display = "block";
+    }
+
+    //stops the animation of the down arrow on scroll 
+    var downArrow = document.getElementById("downArrowContent");
+    var downArrowBottom = downArrow.getBoundingClientRect().bottom;
+    if (downArrowBottom < windowHeight - screen.height) {
+        downArrow.classList.add("paused");
     }
 }
 
