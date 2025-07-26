@@ -1,31 +1,44 @@
 * {
-    scrollbar-color: #a5e6ba #360568;
+    scrollbar-color: var(--green) var(--purple1);
     margin:0;
 	padding: 0;
 	border: 0;
     box-sizing:border-box;
+    transition: all 0.3s ease-in-out;
     
     /*cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%23000" d="m12 0 12 12-12 12L0 12z"></path></svg>'), auto;*/
 
     /*variables*/
+    --purple1: #360568;
+    --purple2: #5b2a86;
+    --blue1: #7785ac;
+    --blue2: #9ac6c5;
+    --green: #a5e6ba;
+
+    --paddingAll: 5%;
+
     --cards: 3;
     --cardHeight: 70dvh;
     --cardTopPadding: 1.5em; 
     --cardMargin: 5dvw;
+
+    --skills: 8;
+    --skillTransitionDelay: .3s;
 }
 
 body{
-    background-color:#360568;}
+    background-color: var(--purple1);
+}
 
 a {
-    color:#a5e6ba;
+    color: var(--green);
     cursor:pointer;
     transition-duration:.4s;
     text-decoration: none;
 }
 
 a:hover {
-    color: #7785ac;
+    color: var(--blue1);
 }
 
 h1{
@@ -49,38 +62,44 @@ ul.diamond {
 }
 
 .solid, .transparent {
-    padding:5%;
+    padding: var(--paddingAll);
 }
 
 .solid {
-    background-color:#a5e6ba;
-    color: #360568;
-    padding:5%;
+    background-color:var(--green);
+    color: var(--purple1);
+    padding: var(--paddingAll);
 }
 
 .transparent {
-    color: #a5e6ba;
+    color: var(--green);
 }
 
 .active.fade {
-  animation: fade 1s ease-in;
+    
+    opacity: 0;
+    animation: fade 1s ease-in;
+    animation-fill-mode: forwards;
 }
 
 .active.fade.slideUp {
-  animation: slideUp 1s ease-in;
+    animation: slideUp 1s ease-in;
+    animation-fill-mode: forwards;  
 }
 
 .active.fade.slideLeft {
-  animation: slideLeft 1s ease-in;
+    animation: slideLeft 1s ease-in;
+    animation-fill-mode: forwards;
 }
 
 .active.fade.slideRight {
-  animation: slideRight 1s ease-in;
+    animation: slideRight 1s ease-in;
+    animation-fill-mode: forwards;
 }
 
-/*linear-gradient(90deg, #7785ac, #360568, #a5e6ba);*/
+/*linear-gradient(90deg, var(--blue1), var(--purple1), var(--green));*/
 .highlight {
-    background-image: linear-gradient(to right, transparent, #7785ac);
+    background-image: linear-gradient(to right, transparent, var(--blue1));
     background-size: 200% 100%;
     background-position: 0;
     animation-name: myhighlight;
@@ -105,7 +124,7 @@ ul.diamond {
 
 .typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid #a5e6ba; /* The typwriter cursor */
+    border-right: .15em solid var(--green); /* The typwriter cursor */
     white-space: nowrap; /* Keeps the content on a single line */
     margin: 0 auto; /* Gives that scrolling effect as the typing happens */
     /* letter-spacing: .2em; /* Adjusts the spacing between characters */
@@ -119,7 +138,7 @@ ul.diamond {
 
 @keyframes blink-caret {
     from, to { border-color: transparent; }
-    50% { border-color: #a5e6ba; }
+    50% { border-color: var(--green); }
 }
 
 @keyframes fade {
@@ -205,7 +224,7 @@ ul.diamond {
 }
 
 #navbar2 a {
-    color: #9ac6c5;
+    color: var(--blue2);
 }
 
 /*------------------------------DOWN ARROW------------------------------*/
@@ -224,15 +243,15 @@ ul.diamond {
 #downArrowContent {
     position: relative; 
     top:-100%;
-    color:#a5e6ba;
+    color:var(--green);
     font-size: 300%;
-    transition: all 0.3s ease-in-out;
+    /*transition: all 0.3s ease-in-out;*/
     animation: moveUpAndDown 1.5s ease-in-out infinite;
     animation-delay:3s;
 }
 
 #downArrowContent:hover {
-    color: #7785ac;
+    color: var(--blue1);
     cursor: pointer;
 }
 
@@ -249,8 +268,8 @@ ul.diamond {
 }
 
 #title-content {
-    color:#a5e6ba;
-    padding:5%;
+    color:var(--green);
+    padding: var(--paddingAll);
     margin: 0 auto;
     overflow:auto;
 }
@@ -275,7 +294,7 @@ ul.diamond {
 }
 
 #bio-content {
-    padding:5%;
+    padding: var(--paddingAll);
     overflow:hidden;
 }
 
@@ -285,7 +304,7 @@ ul.diamond {
     position:relative;
     /*max-width:1200;*/
     margin: 0 auto;
-    color:#360568;
+    color:var(--purple1);
 }
 
 /*stick thing*/
@@ -293,7 +312,7 @@ ul.diamond {
     content: '';
     position: absolute;
     width:6px;
-    background-color:#a5e6ba;
+    background-color:var(--green);
     top:0;
     bottom:0;
     left:50%;
@@ -302,7 +321,7 @@ ul.diamond {
 #timeline .container {
     padding: 10px 40px;
     position: relative;
-    background-color:#360568;
+    background-color:var(--purple1);
     width:50%;
 }
 
@@ -316,7 +335,7 @@ ul.diamond {
     top:10px;
     border-radius:50%;
     z-index:2;
-    background-color: #a5e6ba;
+    background-color: var(--green);
 }
 
 #timeline .left {
@@ -334,27 +353,56 @@ ul.diamond {
 /*the actual boxes*/
 #timeline .content {
     padding: 20px 20px;
-    background-color: #a5e6ba;
+    background-color: var(--green);
     position: relative;
-    transition: all 0.3s ease-in-out;
+    /*transition: all 0.3s ease-in-out;*/
 }
 
 #timeline .content:hover {
     transform: scale(1.02, 1.02);
-    box-shadow: 5px 10px #9ac6c5;
+    box-shadow: 5px 10px var(--blue2);
 }
 
 #timeline a {
-    color: #7785ac;
+    color: var(--blue1);
 }
 
 /*-------------------------------SKILLS------------------------------*/
 .skill {
-    transition: all 0.3s ease-in-out;
+    /*transition: all 0.3s ease-in-out;*/
+    opacity: 1;
 }
+
+.skills .skill:nth-child(1) {
+    animation-delay: calc(var(--skillTransitionDelay) * 1);
+}
+.skills .skill:nth-child(2) {
+    animation-delay: calc(var(--skillTransitionDelay) * 2);
+}
+.skills .skill:nth-child(3) {
+    animation-delay: calc(var(--skillTransitionDelay) * 3);
+}
+.skills .skill:nth-child(4) {
+    animation-delay: calc(var(--skillTransitionDelay) * 4);
+}
+.skills .skill:nth-child(5) {
+    animation-delay: calc(var(--skillTransitionDelay) * 5);
+}
+.skills .skill:nth-child(6) {
+    animation-delay: calc(var(--skillTransitionDelay) * 6);
+}
+.skills .skill:nth-child(7) {
+    animation-delay: calc(var(--skillTransitionDelay) * 7);
+}
+.skills .skill:nth-child(8) {
+    animation-delay: calc(var(--skillTransitionDelay) * 8);
+}
+    
+
 .skill:hover{
     transform: scale(1.1,1.1);
 }
+
 /*------------------------------WEBSITES------------------------------*/
 
 #websitesTitle {
@@ -379,7 +427,7 @@ ul.diamond {
     width:50%;
     padding:1%;
     float: left;
-    transition: all 0.3s ease-in-out;
+    /*transition: all 0.3s ease-in-out;*/
 }
 
 .webimage:hover {
@@ -412,7 +460,7 @@ ul.diamond {
 }
 
 #card1, #card2 {
-    color:#360568;
+    color:var(--purple1);
 }
 
 #card3 {
@@ -427,15 +475,15 @@ ul.diamond {
 }
 
 #card1 .card-content {
-    background-color: #9ac6c5;
+    background-color: var(--blue2);
 }
 
 #card2 .card-content {
-    background-color: #7785ac;
+    background-color: var(--blue1);
 }
 
 #card3 .card-content {
-    background-color: #5b2a86;
+    background-color: var(--purple2);
 }
 
 .card h2 {
@@ -475,7 +523,7 @@ ul.diamond {
 
 #footer {
     text-align:center;
-    color:#a5e6ba
+    color:var(--green)
 }
 
 /*
