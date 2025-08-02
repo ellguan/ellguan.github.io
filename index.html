@@ -35,13 +35,24 @@
             </div>
         </div>
 
-        <div class="stars">
+        <div id="stars">
             <div class="particles"></div>
             <div class="particles"></div>
             <div class="particles"></div>
         </div>
 
-        
+        <div id="shootingStars">
+            <div class="shootingStar"></div>
+            <div class="shootingStar"></div>
+            <div class="shootingStar"></div>
+            <div class="shootingStar"></div>
+            <div class="shootingStar"></div>
+            <div class="shootingStar"></div>
+            <div class="shootingStar"></div>
+            <div class="shootingStar"></div>
+            <div class="shootingStar"></div>
+        </div>
+
         <div id="title">
             <div id="title-content">
                 <h1>Hey! I'm Ellen,</h1>
@@ -51,7 +62,7 @@
         </div>
 
         <div id="bio" class="solid">
-            <div>
+            <div class="fadeblock">
                 <img src="pictures/me.jpg" id="me" class="fade">
                 <div id="bio-content">
                     <h1 class="fade slideLeft">About Me</h1>
@@ -120,6 +131,11 @@
                 <i class="fa-solid fa-database skill fade " id="skill6"></i>
                 <i class="fa-brands fa-git-alt skill fade " id="skill7"></i>
                 <i class="fa-brands fa-php skill fade " id="skill8"></i>
+                <span>
+                    <p class="skill fade">C</p>
+                    <p class="skill fade">C#</p>
+                    <p class="skill fade">Assembly</p>
+                </span>
                 <!-- add C, C#, and assembly-->
             </div>
 
@@ -129,47 +145,38 @@
             <br id="websitesBr">
             <h1 id="websitesTitle" class="fade slideUp">Websites I've Created</h1>
 
-            <!--
-            <div id="webimages">
-                <img src="pictures/haapi.png" id="haapiweb">
-                <img src="pictures/major.png" id="majorweb">
-                <img src="pictures/heart.png" id="herartweb">
-            </div>
-            -->
-            
-
             <div id="container">
                 <ul id="cards">
                     <li class="card" id="card1">
                         <div class="card-content">
                             <div>
-                                <img src="pictures/haapi.png" id="haapiweb" class="webimage" onclick="window.open('https://behaapieatnoodles.great-site.net/', '_blank');">
+                                <img src="pictures/haapi.png" id="haapiweb" class="webimage fade" onclick="window.open('https://behaapieatnoodles.great-site.net/', '_blank');">
                                 <!--<img src="pictures/haapi.gif" class="webgif">  -->
                                 <div class="card-actual-content">
-                                    <h2>Be HAAPI, Eat Noodles</h2>
+                                    <h2 class="fade">Be HAAPI, Eat Noodles</h2>
                                     <ul class="diamond texts">
-                                        <li class=" text"> Simulates an online AAPI noodle shop experience for the Future Business Leaders of America (FBLA) event Website Design</li>
-                                        <li class=" text"> Created with HTML, CSS, JavaScript, PHP, and SQL</li>
-                                        <li class=" text"> Won 10th place during the 2023 FBLA National Leadership Conference</li>
+                                        <li class="fade slideUp text"> Simulates an online AAPI noodle shop experience for the Future Business Leaders of America (FBLA) event Website Design</li>
+                                        <li class="fade slideUp text"> Created with HTML, CSS, JavaScript, PHP, and SQL</li>
+                                        <li class="fade slideUp text"> Won 10th place during the 2023 FBLA National Leadership Conference</li>
                                     </ul>
-                                    <p>Click on the image to visit the website!</p>
+                                    <p class="fade slideUp last">Click on the image to visit the website!</p>
                                 </div> 
                             </div>
                             
                         </div>
                     </li>
                     <li class="card" id="card2">
-                        <div class="card-content">
+                        <div class="card-content">  
                             <div class="">
-                                <img src="pictures/heart.png" class="webimage" onclick="window.open('https://ellguan.github.io/herartoftheory/', '_blank')">
+                                <img src="pictures/heart.png" class="webimage fade" onclick="window.open('https://ellguan.github.io/herartoftheory/', '_blank')">
                                 <div class="card-actual-content">
-                                    <h2>Her Art of Theory</h2>
+                                    <h2 class="fade">Her Art of Theory</h2>
                                     <ul class="diamond texts">
-                                        <li class=" text"> A platform spreading awareness on the gender gap in STEM jobs</li>
-                                        <li class=" text"> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</li>
-                                        <li class=" text"> Developed using HTML, CSS, and JavaScript</li>
+                                        <li class="fade slideUp text"> A platform spreading awareness on the gender gap in STEM jobs</li>
+                                        <li class="fade slideUp text"> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</li>
+                                        <li class="fade slideUp text"> Developed using HTML, CSS, and JavaScript</li>
                                     </ul>
-                                    <p>Click on the image to visit the website!</p>
+                                    <p class="fade slideUp last">Click on the image to visit the website!</p>
                                 </div>
                             </div>
                         </div>
@@ -177,15 +184,15 @@
                     <li class="card" id="card3">
                         <div class="card-content">
                             <div class="">
-                                <img src="pictures/major.png" class="webimage" onclick="window.open('https://ellguan.github.io/what-major-are-you/', '_blank');">
+                                <img src="pictures/major.png" class="webimage fade" onclick="window.open('https://ellguan.github.io/what-major-are-you/', '_blank');">
                                 <div class="card-actual-content">
-                                    <h2>What Major Are You?</h2>
+                                    <h2 class="fade">What Major Are You?</h2>
                                     <ul class="diamond texts">
-                                        <li class=" text"> A for-fun personality quiz</li>
-                                        <li class=" text"> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</li>
-                                        <li class=" text"> Created using HTML, CSS, and JavaScript</li>
+                                        <li class="fade slideUp text"> A for-fun personality quiz</li>
+                                        <li class="fade slideUp text"> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</li>
+                                        <li class="fade slideUp text"> Created using HTML, CSS, and JavaScript</li>
                                     </ul>
-                                    <p>Click on the image to visit the website!</p>
+                                    <p class="fade slideUp last">Click on the image to visit the website!</p>
                                 </div>
                             </div>
                         </div>
@@ -201,15 +208,17 @@
         </div>
 
         <div id="connect" class="transparent">
-            <div class="fade">
-                <div class="test">
+            <div class="">
+                <div class="test fade">
                     <div>
                         <h1>Let's Connect!</h1>
                     </div>
                 </div>
-                <a href="https://www.linkedin.com/in/ellen-g-84b555248/" class="bi bi-linkedin" target="_blank"></a>
-                <a href="mailto:ellguan.ms@gmail.com" target="_blank" class="bi bi-envelope"></a>
-                <a href="https://github.com/ellguan" target="_blank" class="bi bi-github"></a>
+                <div class="texts">
+                    <a href="https://www.linkedin.com/in/ellen-g-84b555248/" class="bi bi-linkedin text fade" target="_blank"></a>
+                    <a href="mailto:ellguan.ms@gmail.com" target="_blank" class="bi bi-envelope text fade"></a>
+                    <a href="https://github.com/ellguan" target="_blank" class="bi bi-github text fade"></a>
+                </div>
             </div>
         </div>
 

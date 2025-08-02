@@ -15,12 +15,11 @@ function fadein() {
     var elementTop = reveals[i].getBoundingClientRect().top;
     var elementBottom = reveals[i].getBoundingClientRect().bottom;
     var elementVisible = 20;
-    if (windowHeight > elementBottom ) {
-        isVisible[i] = true;
-    } else if ((elementTop < windowHeight - elementVisible) && isVisible[i] !== true) {
-        reveals[i].classList.add("active");
+    if ((elementTop < windowHeight - elementVisible) && isVisible[i] !== true) {
+      reveals[i].classList.add("active");
     }
-    else if (windowHeight > elementBottom && isVisible[i] === true) {
+    else if (windowHeight > elementBottom + screen.height ) {
+      isVisible[i] = true;
       reveals[i].classList.remove("active");
       reveals[i].classList.add("visible");
     }
@@ -28,6 +27,7 @@ function fadein() {
 }
 
 window.addEventListener("scroll", fadein);
+window.onload = fadein();
 
 
 function hide(){
@@ -39,10 +39,10 @@ function hide(){
     var cardBottom = card3.getBoundingClientRect().bottom;
     var elementVisible = 150; // how far from the bottom of the screen the element should be visible
     if (cardBottom < windowHeight - elementVisible) {
-        webTitle.style.display = "none";
+        webTitle.style.visibility = "hidden";
     }
     else {
-        webTitle.style.display = "block";
+        webTitle.style.visibility = "visible";
     }
 
     //stops the animation of the down arrow on scroll 
@@ -51,6 +51,7 @@ function hide(){
     if (downArrowBottom < windowHeight - screen.height) {
         downArrow.classList.add("paused");
     }
+    
 }
 
 window.addEventListener("scroll", hide);

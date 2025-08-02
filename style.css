@@ -140,6 +140,10 @@ ul.diamond {
     animation-delay: calc(var(--transitionDelayAll) * 3);
 }
 
+.fade.last {
+    animation-delay: calc(var(--transitionDelayAll) * 4);
+}
+
 .test {
     display: flex;
     justify-content:center;
@@ -284,7 +288,7 @@ ul.diamond {
 }
 
 /*------------------------------PARTICLES------------------------------*/
-.stars .particles {
+#stars .particles {
     box-shadow: 43vw 42vh var(--blue2),-39vw -33vh var(--blue2),22vw -41vh var(--blue2), 28vw 9vh var(--blue2),-12vw 15vh var(--blue2),43vw 25vh var(--blue2),45vw -26vh var(--blue2), 21vw 34vh var(--blue2),-47vw -37vh var(--blue2),-41vw 26vh var(--blue2),50vw 12vh var(--blue2), 6vw -43vh var(--blue2),-18vw -33vh var(--blue2),-2vw -21vh var(--blue2),-40vw -5vh var(--blue2), 39vw -31vh var(--blue2),27vw -40vh var(--blue2),30vw 15vh var(--blue2),0vw -13vh var(--blue2), 0vw 36vh var(--blue2),-26vw -26vh var(--blue2),27vw -13vh var(--blue2),30vw -14vh var(--blue2), 18vw -12vh var(--blue2),41vw 20vh var(--blue2),21vw 34vh var(--blue2),-13vw 34vh var(--blue2),-4vw 0vh var(--blue2),2vw -36vh var(--blue2),-31vw -42vh var(--blue2),-44vw 45vh var(--blue2),   26vw -11vh var(--blue2),-44vw -45vh var(--blue2),45vw -30vh var(--blue2),-45vw 47vh var(--blue2), 12vw 40vh var(--blue2),-11vw -44vh var(--blue2),12vw 18vh var(--blue2),-40vw 13vh var(--blue2), -29vw 22vh var(--blue2),27vw 4vh var(--blue2),-39vw 14vh var(--blue2),25vw -45vh var(--blue2), 32vw -10vh var(--blue2),-15vw 1vh var(--blue2),25vw -7vh var(--blue2),27vw -18vh var(--blue2), -25vw 8vh var(--blue2),36vw -27vh var(--blue2),-41vw -34vh var(--blue2),7vw -43vh var(--blue2), 27vw 7vh var(--blue2),22vw -9vh var(--blue2),8vw 50vh var(--blue2),28vw 6vh var(--blue2), -5vw 15vh var(--blue2),6vw 9vh var(--blue2),5vw -50vh var(--blue2),-45vw -6vh var(--blue2), -32vw -28vh var(--blue2),49vw 27vh var(--blue2),-29vw 33vh var(--blue2),-27vw 21vh var(--blue2),
     -11vw -48vh var(--blue2),-49vw 32vh var(--blue2),26vw 19vh var(--blue2),9vw -1vh var(--blue2), -19vw 29vh var(--blue2),-33vw -31vh var(--blue2),-39vw 19vh var(--blue2),-7vw 1vh var(--blue2), -27vw 8vh var(--blue2),-38vw -33vh var(--blue2),-1vw 23vh var(--blue2),5vw 40vh var(--blue2), 10vw 43vh var(--blue2),-24vw 25vh var(--blue2),32vw 17vh var(--blue2),20vw 20vh var(--blue2), 40vw 40vh var(--blue2),-25vw 0vh var(--blue2),-12vw 47vh var(--blue2),-40vw 2vh var(--blue2), -14vw -6vh var(--blue2),-9vw -32vh var(--blue2),-47vw -19vh var(--blue2),28vw 39vh var(--blue2), -20vw 44vh var(--blue2),-1vw -12vh var(--blue2),-37vw -50vh var(--blue2),19vw -24vh var(--blue2), 39vw -25vh var(--blue2),45vw -47vh var(--blue2),-8vw 41vh var(--blue2),21vw -25vh var(--blue2), -41vw -20vh var(--blue2),-39vw 21vh var(--blue2),1vw 50vh var(--blue2),39vw -46vh var(--blue2), 26vw -20vh var(--blue2);
     position: fixed;
@@ -298,15 +302,15 @@ ul.diamond {
     opacity: 0.8;
 }
 
-.stars .particles:nth-child(1) {
+#stars .particles:nth-child(1) {
     animation: zoom 10s linear infinite;
 }
 
-.stars .particles:nth-child(2) {
+#stars .particles:nth-child(2) {
     animation: zoom2 10s linear infinite;
 }
 
-.stars .particles:nth-child(3) {
+#stars .particles:nth-child(3) {
     animation: zoom3 10s linear infinite;
 }
 
@@ -334,6 +338,125 @@ ul.diamond {
     }
     100%{
         transform: scale(.9);
+    }
+}
+
+/*------------------------------SHOOTING STARS------------------------------*/
+#shootingStars {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100dvh;
+    z-index: -1;
+}
+
+.shootingStar {
+    position: absolute;
+    top:50%;
+    left:90%;
+    width: 4px;
+    height: 4px;
+    background-color: var(--blue1);
+    border-radius: 50%;
+    animation: shootingStar 3s linear infinite;
+    opacity:0;
+}
+
+.shootingStar::before {
+    content: '';
+    position: absolute;
+    top: 50%;
+    width: 50px;
+    height: 2px;
+    background-color: var(--blue1);
+    transform-origin: left;
+    transform: translateY(-50%);
+    background: linear-gradient(90deg, var(--blue1),transparent);
+}
+
+.shootingStar:nth-child(2n)::before {
+    width:100px;
+}
+
+.shootingStar:nth-child(3n)::before {
+    width:150px;
+}
+
+#shootingStars .shootingStar:nth-child(1){
+    top: 0;
+    right: 0;
+    animation-delay: 0s;
+    animation-duration: 3s;
+}
+
+#shootingStars .shootingStar:nth-child(2){
+    top: 0;
+    left: 400px;
+    animation-delay: 0.5s;
+    animation-duration: 4s;
+}
+#shootingStars .shootingStar:nth-child(3){
+    top: 0;
+    left: 200px;
+    animation-delay: 0.7s;
+    animation-duration: 5s;
+}
+
+#shootingStars .shootingStar:nth-child(4){
+    top: 0;
+    left: 700px;
+    animation-delay: 1.5s;
+    animation-duration: 3s;
+}
+
+#shootingStars .shootingStar:nth-child(4){
+    top: 400px;
+    left: 1000px;
+    animation-delay: 2.5s;
+    animation-duration: 4s;
+}
+#shootingStars .shootingStar:nth-child(5){
+    top: 50px;
+    left: 900px;
+    animation-delay: 3s;
+    animation-duration: 8s;
+}
+#shootingStars .shootingStar:nth-child(6){
+    top: 0;
+    left: 800px;
+    animation-delay: 2s;
+    animation-duration: 5s;
+}
+#shootingStars .shootingStar:nth-child(7){
+    top: 0;
+    left: 600px;
+    animation-delay: 2.5s;
+    animation-duration: 6s;
+}
+#shootingStars .shootingStar:nth-child(8){
+    top: 0;
+    left: 300px;
+    animation-delay: 2.5s;
+    animation-duration: 3.3s;
+}
+#shootingStars .shootingStar:nth-child(9){
+    top: 0;
+    left: 350px;
+    animation-delay: 3.5s;
+    animation-duration: 6s;
+}
+
+
+
+@keyframes shootingStar {
+    0% {
+        transform: rotate(315deg) translateX(0);
+        opacity: 1;
+    }
+    100% {
+        transform: rotate(315deg) translateX(-1000px);
+        opacity: 0;
     }
 }
 
@@ -444,6 +567,10 @@ ul.diamond {
     color: var(--blue1);
 }
 
+#timeline a:hover {
+    color: var(--blue2);
+}
+
 /*-------------------------------SKILLS------------------------------*/
 
 .skills .skill:nth-child(1) {
@@ -470,9 +597,26 @@ ul.diamond {
 .skills .skill:nth-child(8) {
     animation-delay: calc(var(--skillTransitionDelay) * 8);
 }
+.skills span .skill:nth-child(1) {
+    animation-delay: calc(var(--skillTransitionDelay) * 9);
+}
+.skills span .skill:nth-child(2) {
+    animation-delay: calc(var(--skillTransitionDelay) * 10);
+}
+.skills span .skill:nth-child(3) {
+    animation-delay: calc(var(--skillTransitionDelay) * 11);
+}
 
 .skill:hover{
     transform: scale(1.1,1.1);
+}
+
+span p {
+    display: inline-block;
+}
+
+span p:hover {
+    cursor: default;
 }
 
 /*------------------------------WEBSITES------------------------------*/
@@ -567,6 +711,21 @@ ul.diamond {
 .card-actual-content {
     margin: 5%;
     overflow:hidden;
+}
+
+#websites ul {
+    list-style-type: none;
+    padding-left: 0px;
+}
+
+#websites #diamond ul li:before {
+  content: "◆";
+  color: var(--purple1);
+  padding-left:2px;
+}
+
+#websites #card3 #diamond ul li:before {
+  color: var(--green);
 }
 
 /*------------------------------CONNECT------------------------------*/
