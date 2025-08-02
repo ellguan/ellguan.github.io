@@ -14,14 +14,15 @@ function fadein() {
   for (var i = 0; i < reveals.length; i++) {
     var elementTop = reveals[i].getBoundingClientRect().top;
     var elementBottom = reveals[i].getBoundingClientRect().bottom;
-    var elementVisible = 10;
+    var elementVisible = 20;
     if (windowHeight > elementBottom ) {
         isVisible[i] = true;
     } else if ((elementTop < windowHeight - elementVisible) && isVisible[i] !== true) {
         reveals[i].classList.add("active");
     }
-    else {
+    else if (windowHeight > elementBottom && isVisible[i] === true) {
       reveals[i].classList.remove("active");
+      reveals[i].classList.add("visible");
     }
   }
 }
@@ -53,3 +54,29 @@ function hide(){
 }
 
 window.addEventListener("scroll", hide);
+
+function randomNumber(min, max) {
+  return Math.floor(Math.random() * (max - min + 1)) + min;
+}
+
+// GENERATING THE PARTICLES, DON'T NEED THIS ANYMORE
+/*
+const STAR_COUNT = 100;
+let result = "";
+for(let i = 0; i < STAR_COUNT; i++){
+  result += `${randomNumber(-50, 50)}vw ${randomNumber(-50, 50)}vh #7785ac,`;
+}
+console.log(result.substring(0, result.length - 1));
+*/
+
+/*buggy this doesn't even work lol */
+ $(function() {
+        $("#haapiweb").hover(
+            function() {
+                $(this).attr("src", "pictures/haapi.gif");
+            },
+            function() {
+                $(this).attr("src", "pictures/haapi.png");
+            }                         
+        );                  
+    });

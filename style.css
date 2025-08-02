@@ -16,6 +16,7 @@
     --green: #a5e6ba;
 
     --paddingAll: 5%;
+    --transitionDelayAll: .5s;
 
     --cards: 3;
     --cardHeight: 70dvh;
@@ -75,24 +76,34 @@ ul.diamond {
     color: var(--green);
 }
 
+.fade {
+    opacity:0;
+}
+
+.visible {
+    opacity:1;
+}
+
 .active.fade {
-    
     opacity: 0;
     animation: fade 1s ease-in;
     animation-fill-mode: forwards;
 }
 
 .active.fade.slideUp {
+    opacity: 0;
     animation: slideUp 1s ease-in;
     animation-fill-mode: forwards;  
 }
 
 .active.fade.slideLeft {
+    opacity: 0;
     animation: slideLeft 1s ease-in;
     animation-fill-mode: forwards;
 }
 
 .active.fade.slideRight {
+    opacity: 0;
     animation: slideRight 1s ease-in;
     animation-fill-mode: forwards;
 }
@@ -117,11 +128,24 @@ ul.diamond {
     animation-delay: 1.5s;
 }
 
+.texts .text:nth-child(1) {
+    animation-delay: calc(var(--transitionDelayAll) * 1);
+}
+
+.texts .text:nth-child(2) {
+    animation-delay: calc(var(--transitionDelayAll) * 2);
+}
+
+.texts .text:nth-child(3) {
+    animation-delay: calc(var(--transitionDelayAll) * 3);
+}
+
 .test {
     display: flex;
     justify-content:center;
 }
 
+/* WILL EDIT*/
 .typewriter {
     overflow: hidden; /* Ensures the content is not revealed until the animation */
     border-right: .15em solid var(--green); /* The typwriter cursor */
@@ -259,6 +283,60 @@ ul.diamond {
     animation-play-state: paused;
 }
 
+/*------------------------------PARTICLES------------------------------*/
+.stars .particles {
+    box-shadow: 43vw 42vh var(--blue2),-39vw -33vh var(--blue2),22vw -41vh var(--blue2), 28vw 9vh var(--blue2),-12vw 15vh var(--blue2),43vw 25vh var(--blue2),45vw -26vh var(--blue2), 21vw 34vh var(--blue2),-47vw -37vh var(--blue2),-41vw 26vh var(--blue2),50vw 12vh var(--blue2), 6vw -43vh var(--blue2),-18vw -33vh var(--blue2),-2vw -21vh var(--blue2),-40vw -5vh var(--blue2), 39vw -31vh var(--blue2),27vw -40vh var(--blue2),30vw 15vh var(--blue2),0vw -13vh var(--blue2), 0vw 36vh var(--blue2),-26vw -26vh var(--blue2),27vw -13vh var(--blue2),30vw -14vh var(--blue2), 18vw -12vh var(--blue2),41vw 20vh var(--blue2),21vw 34vh var(--blue2),-13vw 34vh var(--blue2),-4vw 0vh var(--blue2),2vw -36vh var(--blue2),-31vw -42vh var(--blue2),-44vw 45vh var(--blue2),   26vw -11vh var(--blue2),-44vw -45vh var(--blue2),45vw -30vh var(--blue2),-45vw 47vh var(--blue2), 12vw 40vh var(--blue2),-11vw -44vh var(--blue2),12vw 18vh var(--blue2),-40vw 13vh var(--blue2), -29vw 22vh var(--blue2),27vw 4vh var(--blue2),-39vw 14vh var(--blue2),25vw -45vh var(--blue2), 32vw -10vh var(--blue2),-15vw 1vh var(--blue2),25vw -7vh var(--blue2),27vw -18vh var(--blue2), -25vw 8vh var(--blue2),36vw -27vh var(--blue2),-41vw -34vh var(--blue2),7vw -43vh var(--blue2), 27vw 7vh var(--blue2),22vw -9vh var(--blue2),8vw 50vh var(--blue2),28vw 6vh var(--blue2), -5vw 15vh var(--blue2),6vw 9vh var(--blue2),5vw -50vh var(--blue2),-45vw -6vh var(--blue2), -32vw -28vh var(--blue2),49vw 27vh var(--blue2),-29vw 33vh var(--blue2),-27vw 21vh var(--blue2),
+    -11vw -48vh var(--blue2),-49vw 32vh var(--blue2),26vw 19vh var(--blue2),9vw -1vh var(--blue2), -19vw 29vh var(--blue2),-33vw -31vh var(--blue2),-39vw 19vh var(--blue2),-7vw 1vh var(--blue2), -27vw 8vh var(--blue2),-38vw -33vh var(--blue2),-1vw 23vh var(--blue2),5vw 40vh var(--blue2), 10vw 43vh var(--blue2),-24vw 25vh var(--blue2),32vw 17vh var(--blue2),20vw 20vh var(--blue2), 40vw 40vh var(--blue2),-25vw 0vh var(--blue2),-12vw 47vh var(--blue2),-40vw 2vh var(--blue2), -14vw -6vh var(--blue2),-9vw -32vh var(--blue2),-47vw -19vh var(--blue2),28vw 39vh var(--blue2), -20vw 44vh var(--blue2),-1vw -12vh var(--blue2),-37vw -50vh var(--blue2),19vw -24vh var(--blue2), 39vw -25vh var(--blue2),45vw -47vh var(--blue2),-8vw 41vh var(--blue2),21vw -25vh var(--blue2), -41vw -20vh var(--blue2),-39vw 21vh var(--blue2),1vw 50vh var(--blue2),39vw -46vh var(--blue2), 26vw -20vh var(--blue2);
+    position: fixed;
+    top: 50%;
+    left:50%;
+    height: 2px;
+    width: 2px;
+    background-color: var(--blue1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0.8;
+}
+
+.stars .particles:nth-child(1) {
+    animation: zoom 10s linear infinite;
+}
+
+.stars .particles:nth-child(2) {
+    animation: zoom2 10s linear infinite;
+}
+
+.stars .particles:nth-child(3) {
+    animation: zoom3 10s linear infinite;
+}
+
+@keyframes zoom {
+    0%{
+        transform: scale(1);
+    }
+    100%{
+        transform: scale(1.5);
+    }
+}
+
+@keyframes zoom2 {
+    0%{
+        transform: scale(.7);
+    }
+    100%{
+        transform: scale(1.2);
+    }
+}
+
+@keyframes zoom3 {
+    0%{
+        transform: scale(.4);
+    }
+    100%{
+        transform: scale(.9);
+    }
+}
+
 /*------------------------------TITLE------------------------------*/
 #title {
     min-height:100dvh;
@@ -281,7 +359,6 @@ ul.diamond {
 #title p{
     font-size:300%;
 }
-
 
 /*------------------------------BIO------------------------------*/
 #bio p {
@@ -368,10 +445,6 @@ ul.diamond {
 }
 
 /*-------------------------------SKILLS------------------------------*/
-.skill {
-    /*transition: all 0.3s ease-in-out;*/
-    opacity: 1;
-}
 
 .skills .skill:nth-child(1) {
     animation-delay: calc(var(--skillTransitionDelay) * 1);
@@ -397,7 +470,6 @@ ul.diamond {
 .skills .skill:nth-child(8) {
     animation-delay: calc(var(--skillTransitionDelay) * 8);
 }
-    
 
 .skill:hover{
     transform: scale(1.1,1.1);
@@ -410,24 +482,10 @@ ul.diamond {
     top:5%;
 }
 
-/*
-#webimages {
-    display: inline-block;
-    margin:auto;
-}
-
-#haapiweb, #majorweb, #herartweb {
-    float:left;
-    width: 30%;
-    padding:1%;
-}
-*/
-
-.webimage{
+.webimage, .webgif {
     width:50%;
-    padding:1%;
+    padding:3%;
     float: left;
-    /*transition: all 0.3s ease-in-out;*/
 }
 
 .webimage:hover {
