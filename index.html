@@ -19,16 +19,23 @@
         </style>
     </head>
     <body>
-        <div id="navbar">
-            <div id="navbar2">
-                <p><a onclick="scrollWindow('title')">◆</a></p>
-                <p><a onclick="scrollWindow('bio')">◆</a></p>
-                <p><a onclick="scrollWindow('work')">◆</a></p>
-                <p><a onclick="scrollWindow('websitesBr')">◆</a></p>
-                <p><a onclick="scrollWindow('connect')">◆</a></p>
-            </div>
+        <div id="menu" onclick="openMenu()">
+            <i class="fa-solid fa-bars"></i>
         </div>
 
+        <div id="menuOverlay">
+            <div id="menuContent">
+                <h1>Menu</h1>
+                <a id="exit" onclick="closeMenu()">&times;</a>
+                <p><a onclick="linkClick('title')">Home</a></p>
+                <p><a onclick="linkClick('bio')">About</a></p>
+                <p><a onclick="linkClick('work')">Work Experiences & Skills</a></p>
+                <p><a onclick="linkClick('websitesBr')">Websites I've Created</a></p>
+                <p><a onclick="linkClick('art')">My Art</a></p>
+                <p><a onclick="linkClick('connect')">Connect with Me!</a></p>
+            </div>
+        </div>
+        
         <div id="downArrow">
             <div id="downArrowContent" onclick="scrollWindow('bio')">
                 <i class="bi bi-caret-down-fill"></i>

@@ -56,11 +56,32 @@ function hide(){
 
 window.addEventListener("scroll", hide);
 
+//These functions open and close the menu overlay
+function openMenu() {
+  var menuOverlay = document.getElementById("menuOverlay");
+  menuOverlay.classList.add("show");
+}
+var menuOverlay = document.getElementById("menuOverlay");
+function closeMenu() {
+  menuOverlay.classList.remove("show");
+}
+window.onclick = function(event) {
+  if (event.target == menuOverlay) {
+    closeMenu();
+  }
+}
+
+// When a link in the menu is clicked, scrolls to the element and closes the menu
+function linkClick(element) {
+  scrollWindow(element);
+  closeMenu();
+}
+
+// GENERATING THE PARTICLES, DON'T NEED THIS ANYMORE
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
 
-// GENERATING THE PARTICLES, DON'T NEED THIS ANYMORE
 /*
 const STAR_COUNT = 100;
 let result = "";
