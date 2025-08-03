@@ -5,6 +5,7 @@
 	border: 0;
     box-sizing:border-box;
     transition: all 0.3s ease-in-out;
+    cursor: default;
     
     /*cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%23000" d="m12 0 12 12-12 12L0 12z"></path></svg>'), auto;*/
 
@@ -117,7 +118,6 @@ ul.diamond {
     animation-fill-mode: forwards;
     animation-duration: 3s;
     padding: 0.1em 0.2em;
-    border-radius: 0.3em;
 }
 
 .highlight.first {
@@ -243,13 +243,16 @@ ul.diamond {
     font-size: 150%;
     background-color:var(--blue1);
     padding: 1%;
-    border-radius: 25%;
     
 }
 
 #menu:hover {
     color: var(--blue2);
     background-color: var(--purple2);
+    cursor: pointer;
+}
+
+#menu i:hover {
     cursor: pointer;
 }
 
@@ -758,7 +761,6 @@ span p:hover {
 
 .card-content {
     padding: 10px;
-	border-radius: 50px;
     height: var(--cardHeight);
     /*
 	justify-content: center;
@@ -782,13 +784,13 @@ span p:hover {
     padding-left: 0px;
 }
 
-#websites #diamond ul li:before {
+#websites .texts p:before {
   content: "◆";
   color: var(--purple1);
-  padding-left:2px;
+  padding: 2px;
 }
 
-#websites #card3 #diamond ul li:before {
+#websites #card3 .texts p:before {
   color: var(--green);
 }
 

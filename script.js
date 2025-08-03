@@ -1,11 +1,10 @@
 /* When clicked, scrolls window to element */
 function scrollWindow(element) {
  const scroll = document.getElementById(element);
- scroll.scrollIntoView({behavior: "smooth", block: "center"});
+ scroll.scrollIntoView({behavior: "smooth"});
 }
 
 var isVisible = new Array();
-
 /*fades in elements upon scroll (only once)*/
 function fadein() {
   var reveals = document.querySelectorAll(".fade");
@@ -25,7 +24,6 @@ function fadein() {
     }
   }
 }
-
 window.addEventListener("scroll", fadein);
 window.onload = fadein();
 
