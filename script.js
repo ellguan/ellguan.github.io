@@ -90,13 +90,13 @@ console.log(result.substring(0, result.length - 1));
 */
 
 /*buggy this doesn't even work lol */
- $(function() {
-        $("#haapiweb").hover(
-            function() {
-                $(this).attr("src", "pictures/haapi.gif");
-            },
-            function() {
-                $(this).attr("src", "pictures/haapi.png");
-            }                         
-        );                  
-    });
+//  $(function() {
+//         $("#haapiweb").hover(
+//             function() {
+//                 $(this).attr("src", "pictures/haapi.gif");
+//             },
+//             function() {
+//                 $(this).attr("src", "pictures/haapi.png");
+//             }                         
+//         );                  
+//     });

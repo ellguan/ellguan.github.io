@@ -684,8 +684,13 @@ ul.diamond {
     transform: scale(1.1,1.1);
 }
 
-span p {
+#skills span {
+    margin-left:15px;
+}
+
+#skills span p {
     display: inline-block;
+    margin-right:-30px;
 }
 
 span p:hover {
@@ -766,23 +771,19 @@ span p:hover {
 }
 
 .card-content {
-    padding: 5px;
     height: var(--cardHeight);
     /*
 	justify-content: center;
     */
 	/*transition: all 0.5s;*/
-}
 
-.card-content .fade {
     display: flex;
     align-items: center;
     text-align:left;
 }
 
 .card-actual-content {
-    margin: 5%;
-    overflow:hidden;
+    padding: 5%;
 }
 
 #websites ul {
