@@ -5,11 +5,13 @@
 	border: 0;
     box-sizing:border-box;
     transition: all 0.3s ease-in-out;
-    cursor: default;
+    cursor: url(pictures/default.png), default; 
     
     /*cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%23000" d="m12 0 12 12-12 12L0 12z"></path></svg>'), auto;*/
 
     /*variables*/
+    --pointer: url(pictures/pointer.png), pointer;
+
     --purple1: #360568;
     --purple2: #5b2a86;
     --blue1: #7785ac;
@@ -34,7 +36,7 @@ body{
 
 a {
     color: var(--green);
-    cursor:pointer;
+    cursor:var(--pointer);
     transition-duration:.4s;
     text-decoration: none;
 }
@@ -50,7 +52,7 @@ h1{
     font-weight: 700;
 }
 
-h2, h3, p, ul {
+h2, h3, p, ul, a {
     font-family: "futura-pt", sans-serif;
 }
 
@@ -249,11 +251,11 @@ ul.diamond {
 #menu:hover {
     color: var(--blue2);
     background-color: var(--purple2);
-    cursor: pointer;
+    cursor: var(--pointer);
 }
 
 #menu i:hover {
-    cursor: pointer;
+    cursor: var(--pointer);
 }
 
 #menuOverlay {
@@ -324,9 +326,9 @@ ul.diamond {
     animation-delay:3s;
 }
 
-#downArrowContent:hover {
+#downArrowContent i:hover {
     color: var(--blue1);
-    cursor: pointer;
+    cursor: var(--pointer);
 }
 
 #downArrowContent.paused {
@@ -638,6 +640,10 @@ ul.diamond {
     color: var(--blue2);
 }
 
+#timeline img {
+    width:100%;
+}
+
 /*-------------------------------SKILLS------------------------------*/
 
 .skills .skill:nth-child(1) {
@@ -701,7 +707,7 @@ span p:hover {
 
 .webimage:hover {
     transform: scale(1.05, 1.05);
-    cursor: pointer;
+    cursor: var(--pointer);
 }
 
 #websites .container {
@@ -760,7 +766,7 @@ span p:hover {
 }
 
 .card-content {
-    padding: 10px;
+    padding: 5px;
     height: var(--cardHeight);
     /*
 	justify-content: center;
@@ -793,6 +799,48 @@ span p:hover {
 #websites #card3 .texts p:before {
   color: var(--green);
 }
+
+/*------------------------------ART------------------------------*/
+#art a {
+    color: var(--purple1);
+    font-size: 200%;
+}
+#art a:hover {
+    color: var(--blue1);
+}
+
+.art {
+    width:90px;
+
+    /*
+    position: absolute;
+    inset-inline-start: var(--marquee-item-offset);
+    animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
+    transform: translateX(-50%);
+    */
+}
+
+.art.long {
+    width:160px;
+}
+/*
+.artwork1, .artwork2 {
+    --marquee-max-width: 90vw;
+
+    display: flex;
+    block-size: var(--marquee-item-height);
+    max-inline-size: var(--marquee-max-width);
+    position: relative;
+    overflow-x: hidden;
+    mask-image: linear-gradient(
+        to right,
+        hsl(0 0% 0% / 0),
+        hsl(0 0% 0% / 1) 20%,
+        hsl(0 0% 0% / 1) 80%,
+        hsl(0 0% 0% / 0)
+    );
+}
+    */
 
 /*------------------------------CONNECT------------------------------*/
 #connect {
