@@ -335,7 +335,7 @@ ul.diamond {
     overflow: visible;
     top:85%;
     right:50%;
-    width:max-content;
+    width: max-content;
     margin-left:auto;
     z-index: 1;
 }
@@ -673,9 +673,13 @@ ul.diamond {
     /*transition: all 0.3s ease-in-out;*/
 }
 
-#timeline .content:hover {
-    transform: scale(1.02, 1.02);
-    box-shadow: 5px 10px var(--blue2);
+@media screen and (min-width: 600px) {
+
+    #timeline .content:hover {
+        transform: scale(1.02, 1.02);
+        box-shadow: 5px 10px var(--blue2);
+    }
+
 }
 
 #timeline a {
@@ -751,8 +755,10 @@ ul.diamond {
     animation-delay: calc(var(--skillTransitionDelay) * 11);
 }
 
-.skill:hover{
-    transform: scale(1.1,1.1);
+@media screen and (min-width: 600px) {
+    .skill:hover{
+        transform: scale(1.1,1.1);
+}
 }
 
 #skills span {
@@ -793,9 +799,11 @@ span p:hover {
     float: left;
 }
 
-.webimage:hover {
-    transform: scale(1.05, 1.05);
-    cursor: var(--pointer);
+@media screen and (min-width: 600px) {
+    .webimage:hover {
+        transform: scale(1.05, 1.05);
+        cursor: var(--pointer);
+    }
 }
 
 #websites .container {
