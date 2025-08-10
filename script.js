@@ -75,11 +75,66 @@ function linkClick(element) {
   closeMenu();
 }
 
+var clickedPaused = false;
+//Pauses all animations (including fading in)
+function pauseAnimations(){
+
+  const particles = document.getElementsByClassName("particles");
+  const shootingStars = document.getElementsByClassName("shootingStar");
+  const reveals = document.querySelectorAll(".fade");
+  const highlights = document.getElementsByClassName("highlight")
+  const downArrow = document.getElementById("downArrowContent");
+
+  if (clickedPaused == false) {
+    for (var particle of particles) {
+    particle.classList.add("inactive");
+    }
+    for (var shootingStar of shootingStars) {
+      shootingStar.classList.add("inactive");
+    }
+    for (var highlight of highlights) {
+      highlight.classList.add("inactive");
+    }
+    for (var reveal of reveals) {
+      reveal.classList.add("visible");
+    }
+    for (let i = 0; i < reveals.length; i++) {
+      isVisible[i] = true;
+    }
+    downArrow.classList.add("paused");
+    document.getElementById('pauseButton').innerHTML = '<i class="bi bi-play-circle"></i>';
+    document.getElementById('toggleOnOff').innerHTML = 'on';
+
+    clickedPaused = true;
+  } else {
+    for (var particle of particles) {
+      particle.classList.remove("inactive");
+    }
+    for (var shootingStar of shootingStars) {
+      shootingStar.classList.remove("inactive");
+    }
+    for (var highlight of highlights) {
+      highlight.classList.remove("inactive");
+    }
+    for (var reveal of reveals) {
+      reveal.classList.remove("visible");
+    }
+    for (let i = 0; i < reveals.length; i++) {
+      isVisible[i] = false;
+    }
+    fadein();
+    downArrow.classList.remove("paused");
+    document.getElementById('pauseButton').innerHTML = '<i class="bi bi-pause-circle"></i>';
+    document.getElementById('toggleOnOff').innerHTML = 'off';
+    clickedPaused = false;
+  }
+  
+}
+
 // GENERATING THE PARTICLES, DON'T NEED THIS ANYMORE
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 /*
 const STAR_COUNT = 100;
 let result = "";

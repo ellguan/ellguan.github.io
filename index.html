@@ -27,13 +27,19 @@
             <div id="menuContent">
                 <h1>Menu</h1>
                 <a id="exit" onclick="closeMenu()">&times;</a>
-                <p><a onclick="linkClick('title')">Home</a></p>
-                <p><a onclick="linkClick('bio')">About</a></p>
-                <p><a onclick="linkClick('work')">Work Experiences & Skills</a></p>
-                <p><a onclick="linkClick('websitesBr')">Websites I've Created</a></p>
-                <p><a onclick="linkClick('art')">My Art</a></p>
-                <p><a onclick="linkClick('connect')">Connect with Me!</a></p>
+                <p><a onclick="linkClick('title')">◆Home◆</a></p>
+                <p><a onclick="linkClick('bio')">◆About◆</a></p>
+                <p><a onclick="linkClick('work')">◆Work Experiences & Skills◆</a></p>
+                <p><a onclick="linkClick('websitesBr')">◆Websites I've Created◆</a></p>
+                <p><a onclick="linkClick('art')">◆My Art◆</a></p>
+                <p><a onclick="linkClick('connect')">◆Connect with Me!◆</a></p>
+                <br>
+                <p><a onclick="pauseAnimations()">◆Toggle <span id="toggleOnOff">off</span> animations!◆</a></p>
             </div>
+        </div>
+
+        <div id="pauseButton" onclick="pauseAnimations()">
+            <i class="bi bi-pause-circle"></i>
         </div>
         
         <div id="downArrow">
@@ -49,6 +55,10 @@
         </div>
 
         <div id="shootingStars">
+            <div class="shootingStar"></div>
+            <div class="shootingStar"></div>
+            <div class="shootingStar"></div>
+            <div class="shootingStar"></div>
             <div class="shootingStar"></div>
             <div class="shootingStar"></div>
             <div class="shootingStar"></div>

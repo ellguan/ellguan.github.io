@@ -91,6 +91,12 @@ ul.diamond {
 
 .flex {
     display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#shootingStars .shootingStar.inactive, .highlight.inactive{
+    animation-play-state: paused;
 }
 
 .active.fade {
@@ -241,6 +247,7 @@ ul.diamond {
     }
 }
 
+/*for phones*/
 @media screen and (max-width: 600px) {
     h1 {
         font-size:300%;
@@ -254,10 +261,23 @@ ul.diamond {
         padding: 0em 0.05em;
     }
 
+}
+
+/*for phones and tablets*/
+@media screen and (max-width: 1100px) {
     .flex {
         flex-direction: column;
     }
+}
 
+@media (prefers-reduced-motion: reduce) {
+    #stars .particles.inactive {
+    animation-play-state: paused;
+    }
+    
+    #shootingStars .shootingStar.inactive, .highlight.inactive{
+    animation-play-state: paused;
+    }
 }
 
 /*------------------------------MENU------------------------------*/
@@ -270,7 +290,9 @@ ul.diamond {
     font-size: 150%;
     background-color:var(--blue1);
     padding: 1%;
-    
+    display: flex;
+    justify-content: center;
+    align-items: center; 
 }
 
 #menu:hover {
@@ -335,6 +357,32 @@ ul.diamond {
 
 }
 
+/*------------------------------PAUSE BUTTON------------------------------*/
+#pauseButton {
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    z-index: 2;
+    color: var(--green);
+    font-size: 150%;
+    background-color:var(--blue1);
+    padding: 1%;
+    border-radius:50%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+}
+
+#pauseButton:hover {
+    color: var(--blue2);
+    background-color: var(--purple2);
+    cursor: var(--pointer);
+}
+
+#pauseButton i:hover {
+    cursor: var(--pointer);
+}
+
 /*------------------------------DOWN ARROW------------------------------*/
 
 #downArrow {
@@ -342,7 +390,7 @@ ul.diamond {
     height: 0px;
     overflow: visible;
     top:85%;
-    right:50%;
+    right: 45%;
     width: max-content;
     margin-left:auto;
     z-index: 1;
@@ -394,6 +442,10 @@ ul.diamond {
 #stars .particles:nth-child(3) {
     animation: zoom3 9s linear infinite;
     animation-delay:6s;
+}
+
+ #stars .particles.inactive{
+    animation-play-state: paused;
 }
 
 @keyframes zoom {
@@ -510,45 +562,60 @@ ul.diamond {
     animation-delay: 1.5s;
     animation-duration: 3s;
 }
-
-#shootingStars .shootingStar:nth-child(4){
+#shootingStars .shootingStar:nth-child(5){
     top: 400px;
-    left: 1000px;
+    left: 1600px;
     animation-delay: 2.5s;
     animation-duration: 4s;
 }
-#shootingStars .shootingStar:nth-child(5){
+#shootingStars .shootingStar:nth-child(6){
     top: 50px;
-    left: 900px;
+    left: 1800px;
     animation-delay: 3s;
     animation-duration: 8s;
 }
-#shootingStars .shootingStar:nth-child(6){
+#shootingStars .shootingStar:nth-child(7){
     top: 0;
     left: 800px;
     animation-delay: 2s;
     animation-duration: 5s;
 }
-#shootingStars .shootingStar:nth-child(7){
+#shootingStars .shootingStar:nth-child(8){
     top: 0;
     left: 600px;
     animation-delay: 2.5s;
     animation-duration: 6s;
 }
-#shootingStars .shootingStar:nth-child(8){
+#shootingStars .shootingStar:nth-child(9){
     top: 0;
     left: 300px;
     animation-delay: 2.5s;
     animation-duration: 3.3s;
 }
-#shootingStars .shootingStar:nth-child(9){
+#shootingStars .shootingStar:nth-child(10){
     top: 0;
-    left: 350px;
+    left: 1600px;
     animation-delay: 3.5s;
     animation-duration: 6s;
 }
-
-
+#shootingStars .shootingStar:nth-child(11){
+    top: 200px;
+    left: 1700px;
+    animation-delay: .3s;
+    animation-duration: 7s;
+}
+#shootingStars .shootingStar:nth-child(12){
+    top: 400px;
+    left: 1800px;
+    animation-delay: 1.5s;
+    animation-duration: 3s;
+}
+#shootingStars .shootingStar:nth-child(13){
+    top: 70px;
+    left: 1900px;
+    animation-delay: 5s;
+    animation-duration: 6s;
+}
 
 @keyframes shootingStar {
     0% {
@@ -556,7 +623,7 @@ ul.diamond {
         opacity: 1;
     }
     100% {
-        transform: rotate(315deg) translateX(-1000px);
+        transform: rotate(315deg) translateX(-1500px);
         opacity: 0;
     }
 }
@@ -567,6 +634,7 @@ ul.diamond {
     display:flex;
     margin:0;
     align-items: center;
+    text-align: center;
 }
 
 #title-content {
@@ -617,21 +685,29 @@ ul.diamond {
 }
 
 @media screen and (max-width: 600px) {
-    #bio .flex {
-        flex-direction: column;
+    #me {
+        width:100%;
     }
 
     #bio-image {
         width: 100%;
-    }
-    #me {
-        width:100%;
     }
 
     #bio p {
         font-size:120%;
     }
 
+}
+
+@media screen and (min-width: 600px) and (max-width: 1100px) {
+
+    #bio-image {
+        width: 100%;
+    }
+
+    #me {
+        width: 60%;
+    }
 }
 
 /*------------------------------WORK------------------------------*/
@@ -694,7 +770,8 @@ ul.diamond {
     /*transition: all 0.3s ease-in-out;*/
 }
 
-@media screen and (min-width: 600px) {
+/*for desktop only*/
+@media screen and (min-width: 1100px) {
 
     #timeline .content:hover {
         transform: scale(1.02, 1.02);
@@ -776,7 +853,8 @@ ul.diamond {
     animation-delay: calc(var(--skillTransitionDelay) * 11);
 }
 
-@media screen and (min-width: 600px) {
+/*for desktop only*/
+@media screen and (min-width: 1100px) {
     .skill:hover{
         transform: scale(1.1,1.1);
 }
@@ -820,13 +898,14 @@ span p:hover {
 }
 
 .card-image {
-    width: 100%;
+    width: 80%;
     display: flex;
     justify-content: center;
     align-items: center; 
 }
 
-@media screen and (min-width: 600px) {
+/*for desktop only*/
+@media screen and (min-width: 1100px) {
     .webimage:hover {
         transform: scale(1.05, 1.05);
         cursor: var(--pointer);
@@ -919,11 +998,8 @@ span p:hover {
   color: var(--green);
 }
 
+/*for phones*/
 @media screen and (max-width: 600px) {
-
-    .webimage {
-        width: 100%;
-    }
 
     .card-content {
         height: var(--phoneCardHeight);
@@ -937,7 +1013,14 @@ span p:hover {
         font-size: 200%;
     }
 
+    
+}
 
+/*for tablets and phones*/
+@media screen and (max-width: 1100px) {
+    .webimage {
+        width: 100%;
+    }
 }
 
 /*------------------------------ART------------------------------*/
@@ -1003,13 +1086,3 @@ span p:hover {
     text-align:center;
     color:var(--green)
 }
-
-/*
-COLOR PALETTE FOR NOW:
-purple1: #360568
-purple2: #5b2a86
-blue1: #7785ac
-blue2: #9ac6c5
-green: #a5e6ba
-
-*/
