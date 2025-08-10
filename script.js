@@ -54,18 +54,27 @@ function hide(){
 
 window.addEventListener("scroll", hide);
 
-//These functions open and close the menu overlay
+//These functions open and close the menu overlay & credits overlay
+var menuOverlay = document.getElementById("menuOverlay");
 function openMenu() {
-  var menuOverlay = document.getElementById("menuOverlay");
   menuOverlay.classList.add("show");
 }
-var menuOverlay = document.getElementById("menuOverlay");
 function closeMenu() {
   menuOverlay.classList.remove("show");
+}
+var creditsOverlay = document.getElementById("creditsOverlay");
+function openCredits() {
+  creditsOverlay.classList.add("show");
+}
+function closeCredits() {
+  creditsOverlay.classList.remove("show");
 }
 window.onclick = function(event) {
   if (event.target == menuOverlay) {
     closeMenu();
+  }
+  if (event.target == creditsOverlay) {
+    closeCredits();
   }
 }
 

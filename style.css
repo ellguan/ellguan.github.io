@@ -274,7 +274,7 @@ ul.diamond {
     #stars .particles.inactive {
     animation-play-state: paused;
     }
-    
+
     #shootingStars .shootingStar.inactive, .highlight.inactive{
     animation-play-state: paused;
     }
@@ -305,7 +305,7 @@ ul.diamond {
     cursor: var(--pointer);
 }
 
-#menuOverlay {
+#menuOverlay, #creditsOverlay {
     position: fixed;
     top: 0;
     left: 0;
@@ -322,12 +322,17 @@ ul.diamond {
     align-content: center;
     height: 100dvh;
 }
-#menuOverlay.show {
+#menuOverlay.show, #creditsOverlay.show {
     visibility: visible;
     opacity: 1;
+
 }
 
-#menuContent {
+#menuOverlay:hover, #creditsOverlay:hover{
+    cursor:var(--pointer);
+}
+
+#menuContent, #creditsContent {
     width: 50%;
     transition: all 0.5s ease-in-out;
     background-color: var(--purple1);
@@ -342,7 +347,7 @@ ul.diamond {
     font-size: 150%;
 }
 
-#menuContent #exit {
+.exit {
     position: absolute;
     top: 2%;
     right: 2%;
@@ -1085,4 +1090,14 @@ span p:hover {
 #footer {
     text-align:center;
     color:var(--green)
+}
+
+/*------------------------------CREDITS------------------------------*/
+
+#creditsOverlay a {
+    color: var(--blue2);
+}
+
+#creditsOverlay a:hover {
+    color:var(--blue1);
 }
