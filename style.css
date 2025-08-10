@@ -356,7 +356,7 @@ ul.diamond {
 }
 
 @media screen and (max-width: 600px) {
-    #menuContent {
+    #menuContent, #creditsContent {
         width: 80%;
     }
 
