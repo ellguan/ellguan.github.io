@@ -1,3 +1,13 @@
+var pathname = window.location.pathname;
+
+if (pathname.includes("index.html")) {
+  window.addEventListener("scroll", fadein);
+  window.onload = fadein();
+  window.addEventListener("scroll", hide);
+} else if (pathname.includes("art.html")){
+
+}
+
 /* When clicked, scrolls window to element */
 function scrollWindow(element) {
  const scroll = document.getElementById(element);
@@ -13,7 +23,7 @@ function fadein() {
   for (var i = 0; i < reveals.length; i++) {
     var elementTop = reveals[i].getBoundingClientRect().top;
     var elementBottom = reveals[i].getBoundingClientRect().bottom;
-    var elementVisible = 20;
+    var elementVisible = 80;
     if ((elementTop < windowHeight - elementVisible) && isVisible[i] !== true) {
       reveals[i].classList.add("active");
     }
@@ -24,8 +34,6 @@ function fadein() {
     }
   }
 }
-window.addEventListener("scroll", fadein);
-window.onload = fadein();
 
 
 function hide(){
@@ -51,8 +59,6 @@ function hide(){
     }
     
 }
-
-window.addEventListener("scroll", hide);
 
 //These functions open and close the menu overlay & credits overlay
 var menuOverlay = document.getElementById("menuOverlay");
@@ -140,6 +146,15 @@ function pauseAnimations(){
   
 }
 
+var artOverlay = document.getElementById("artOverlay");
+function openOverlay(image) {
+  artOverlay.classList.add("show");
+  document.getElementById("artOverlayContent").innerHTML = '<img src="' + image + '" class="overlayImage">';
+}
+function closeOverlay() {
+  artOverlay.classList.remove("show");
+}
+
 // GENERATING THE PARTICLES, DON'T NEED THIS ANYMORE
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
@@ -152,15 +167,3 @@ for(let i = 0; i < STAR_COUNT; i++){
 }
 console.log(result.substring(0, result.length - 1));
 */
-
-/*buggy this doesn't even work lol */
-//  $(function() {
-//         $("#haapiweb").hover(
-//             function() {
-//                 $(this).attr("src", "pictures/haapi.gif");
-//             },
-//             function() {
-//                 $(this).attr("src", "pictures/haapi.png");
-//             }                         
-//         );                  
-//     });

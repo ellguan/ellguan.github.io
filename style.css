@@ -328,7 +328,7 @@ ul.diamond {
 
 }
 
-#menuOverlay:hover, #creditsOverlay:hover{
+#menuOverlay:hover, #creditsOverlay:hover, #artOverlay:hover{
     cursor:var(--pointer);
 }
 
@@ -353,6 +353,10 @@ ul.diamond {
     right: 2%;
     font-size: 200%;
     padding: 1%;
+}
+
+#toggleOnOff {
+    cursor: var(--pointer);
 }
 
 @media screen and (max-width: 600px) {
@@ -1100,4 +1104,87 @@ span p:hover {
 
 #creditsOverlay a:hover {
     color:var(--blue1);
+}
+
+/*------------------------------ART PAGE------------------------------*/
+
+#artTitle { 
+    text-align: center;
+    color: #a5e6ba;
+    padding:5%;
+}
+
+#actualArt .row {
+    display: flex;
+    flex-wrap: wrap;
+    padding: 0 4px;
+}
+
+#actualArt .column {
+    flex: 25%;
+    max-width: 25%;
+    padding: 0 4px;
+}
+
+#actualArt .column img {
+    margin-top: 8px;
+    vertical-align: middle;
+    width: 100%;
+    cursor: var(--pointer);
+}
+
+#goHome {
+    color: #a5e6ba;
+    text-align: center;
+    font-size: 200%;
+}
+
+#artOverlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    background-color: rgba(0,0,0, 0.5);
+    z-index: 5;
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+    display: table-cell;
+    vertical-align: middle;
+    text-align: center;
+    align-content: center;
+    height: 100dvh;
+}
+#artOverlay.show {
+    visibility: visible;
+    opacity: 1;
+
+}
+
+#artOverlayContent {
+    width: 100%;
+    transition: all 0.5s ease-in-out;
+    background-color: rgba(0,0,0, 0.5);
+    position: relative;
+    margin: 0 auto;
+    color: var(--green);
+    text-align: center;
+    display: inline-block;
+}
+
+.overlayImage {
+    width: 100%;
+    height: auto;
+    max-height: 100dvh;
+    object-fit: contain;
+    margin: 0 auto;
+    padding: 20px;
+}
+
+@media screen and (max-width: 800px) {
+    #actualArt .column {
+        flex: 50%;
+        max-width: 50%;
+    }
 }
