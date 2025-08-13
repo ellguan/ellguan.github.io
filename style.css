@@ -99,10 +99,18 @@ ul.diamond {
     animation-play-state: paused;
 }
 
-.active.fade {
+.active.fade, .titlefade {
     opacity: 0;
     animation: fade 1s ease-in;
     animation-fill-mode: forwards;
+}
+
+.titlefade.second {
+    animation-delay: 0.5s;
+}
+
+.titlefade.third{
+    animation-delay:4s;
 }
 
 .active.fade.slideUp {
@@ -135,11 +143,11 @@ ul.diamond {
 }
 
 .highlight.first {
-    animation-delay: 0.5s;
+    animation-delay: 1.5s;
 }
 
 .highlight.second {
-    animation-delay: 1.5s;
+    animation-delay: 2.5s;
 }
 
 .texts .text:nth-child(1) {
@@ -271,7 +279,7 @@ ul.diamond {
 }
 
 @media (prefers-reduced-motion: reduce) {
-    #stars .particles.inactive {
+    #stars .star.inactive {
     animation-play-state: paused;
     }
 
@@ -412,7 +420,7 @@ ul.diamond {
     font-size: 300%;
     /*transition: all 0.3s ease-in-out;*/
     animation: moveUpAndDown 1.5s ease-in-out infinite;
-    animation-delay:3s;
+    animation-delay:5s;
 }
 
 #downArrowContent i:hover {
@@ -425,6 +433,102 @@ ul.diamond {
 }
 
 /*------------------------------PARTICLES------------------------------*/
+#stars .star {
+    position: fixed;
+    top: 50%;
+    left:50%;
+    background-color: var(--blue1);
+    border-radius: 50%;
+    z-index: -1;
+    opacity: 0;
+    animation-name: blinking;
+    animation-iteration-count: infinite;
+
+}
+
+#stars .star:nth-child(1) {
+    box-shadow: -29vw -33vh #7785ac,43vw 28vh #7785ac,46vw 22vh #7785ac,12vw 35vh #7785ac,-40vw -50vh #7785ac,-29vw 16vh #7785ac,41vw -34vh #7785ac,-10vw 40vh #7785ac,-29vw 44vh #7785ac,13vw -16vh #7785ac;
+}
+
+#stars .star:nth-child(2) {
+    box-shadow: 17vw -29vh #7785ac,20vw 8vh #7785ac,-22vw -20vh #7785ac,48vw -13vh #7785ac,19vw -32vh #7785ac,18vw -10vh #7785ac,27vw 37vh #7785ac,29vw -49vh #7785ac,-26vw 19vh #7785ac,-6vw 26vh #7785ac;
+    animation-delay: 3s;
+}
+
+#stars .star:nth-child(3) {
+    box-shadow: 31vw 35vh #7785ac,30vw 30vh #7785ac,16vw 7vh #7785ac,20vw -38vh #7785ac,21vw 36vh #7785ac,-45vw 26vh #7785ac,5vw -22vh #7785ac,-9vw 50vh #7785ac,3vw 2vh #7785ac,-43vw -47vh #7785ac;
+    animation-delay: 6s;
+}
+
+#stars .star:nth-child(4) {
+    box-shadow: 15vw -15vh #7785ac,45vw -35vh #7785ac,-34vw -13vh #7785ac,23vw -13vh #7785ac,-25vw -38vh #7785ac,-11vw 6vh #7785ac,-43vw 44vh #7785ac,-19vw -31vh #7785ac,-21vw 50vh #7785ac,22vw 5vh #7785ac;
+    animation-delay: 1s;
+}
+
+#stars .star:nth-child(5) {
+    box-shadow: -8vw -31vh #7785ac,-18vw 19vh #7785ac,-48vw -41vh #7785ac,42vw -42vh #7785ac,-33vw 2vh #7785ac,6vw -43vh #7785ac,2vw -47vh #7785ac,32vw -23vh #7785ac,-45vw -15vh #7785ac,-46vw -15vh #7785ac;
+    animation-delay: 2s;
+}
+
+#stars .star:nth-child(5) {
+    box-shadow: -8vw -31vh #7785ac,-18vw 19vh #7785ac,-48vw -41vh #7785ac,42vw -42vh #7785ac,-33vw 2vh #7785ac,6vw -43vh #7785ac,2vw -47vh #7785ac,32vw -23vh #7785ac,-45vw -15vh #7785ac,-46vw -15vh #7785ac;
+    animation-delay: 4s;
+}
+
+#stars .star:nth-child(6) {
+    box-shadow: 36vw 5vh #7785ac,46vw 22vh #7785ac,9vw 35vh #7785ac,-13vw -6vh #7785ac,-22vw 7vh #7785ac,50vw 3vh #7785ac,-15vw 8vh #7785ac,7vw 43vh #7785ac,47vw 33vh #7785ac,-6vw 7vh #7785ac;
+    animation-delay: 2s;
+}
+
+#stars .star:nth-child(7) {
+    box-shadow: 31vw 41vh #7785ac,-46vw -33vh #7785ac,44vw 28vh #7785ac,11vw 1vh #7785ac,-3vw 20vh #7785ac,40vw -29vh #7785ac,46vw 32vh #7785ac,-48vw 18vh #7785ac,-6vw -40vh #7785ac,-40vw 34vh #7785ac;
+    animation-delay: 5s;
+}
+
+#stars .star:nth-child(8) {
+    box-shadow: 43vw 25vh #7785ac,49vw 34vh #7785ac,31vw -47vh #7785ac,-7vw 34vh #7785ac,-44vw -18vh #7785ac,-45vw -21vh #7785ac,-13vw -11vh #7785ac,-37vw 9vh #7785ac,-40vw -31vh #7785ac,11vw 19vh #7785ac;
+    animation-delay: 6s;
+}
+
+#stars .star:nth-child(9) {
+    box-shadow: 2vw 26vh #7785ac,27vw -22vh #7785ac,-41vw 29vh #7785ac,-32vw 23vh #7785ac,-17vw -14vh #7785ac,32vw 14vh #7785ac,45vw -32vh #7785ac,-44vw 9vh #7785ac,13vw -36vh #7785ac,11vw -2vh #7785ac;
+    animation-delay: 8s;
+}
+
+#stars .star:nth-child(10) {
+    box-shadow: -6vw -14vh #7785ac,-20vw 17vh #7785ac,-48vw 50vh #7785ac,-45vw 1vh #7785ac,15vw 40vh #7785ac,25vw 19vh #7785ac,-46vw -39vh #7785ac,-40vw -15vh #7785ac,34vw -30vh #7785ac,39vw 43vh #7785ac;
+    animation-delay: 7s;
+}
+
+#stars .star:nth-child(even) {
+    height: 2px;
+    width: 2px;
+    animation-duration: 3s;
+}
+
+#stars .star:nth-child(odd) {
+    height: 3px;
+    width: 3px;
+    animation-duration: 5s;
+}
+
+#stars .star:nth-child(3n+1) {
+    height: 4px;
+    width: 4px;
+}
+
+@keyframes blinking {
+    0% {
+        opacity: 0
+    }
+    50% {
+        opacity: 1
+    }
+    100% {
+        opacity: 0
+    }
+}
+
 #stars .particles {
     box-shadow: 43vw 42vh var(--blue2),-39vw -33vh var(--blue2),22vw -41vh var(--blue2), 28vw 9vh var(--blue2),-12vw 15vh var(--blue2),43vw 25vh var(--blue2),45vw -26vh var(--blue2), 21vw 34vh var(--blue2),-47vw -37vh var(--blue2),-41vw 26vh var(--blue2),50vw 12vh var(--blue2), 6vw -43vh var(--blue2),-18vw -33vh var(--blue2),-2vw -21vh var(--blue2),-40vw -5vh var(--blue2), 39vw -31vh var(--blue2),27vw -40vh var(--blue2),30vw 15vh var(--blue2),0vw -13vh var(--blue2), 0vw 36vh var(--blue2),-26vw -26vh var(--blue2),27vw -13vh var(--blue2),30vw -14vh var(--blue2), 18vw -12vh var(--blue2),41vw 20vh var(--blue2),21vw 34vh var(--blue2),-13vw 34vh var(--blue2),-4vw 0vh var(--blue2),2vw -36vh var(--blue2),-31vw -42vh var(--blue2),-44vw 45vh var(--blue2),   26vw -11vh var(--blue2),-44vw -45vh var(--blue2),45vw -30vh var(--blue2),-45vw 47vh var(--blue2), 12vw 40vh var(--blue2),-11vw -44vh var(--blue2),12vw 18vh var(--blue2),-40vw 13vh var(--blue2), -29vw 22vh var(--blue2),27vw 4vh var(--blue2),-39vw 14vh var(--blue2),25vw -45vh var(--blue2), 32vw -10vh var(--blue2),-15vw 1vh var(--blue2),25vw -7vh var(--blue2),27vw -18vh var(--blue2), -25vw 8vh var(--blue2),36vw -27vh var(--blue2),-41vw -34vh var(--blue2),7vw -43vh var(--blue2), 27vw 7vh var(--blue2),22vw -9vh var(--blue2),8vw 50vh var(--blue2),28vw 6vh var(--blue2), -5vw 15vh var(--blue2),6vw 9vh var(--blue2),5vw -50vh var(--blue2),-45vw -6vh var(--blue2), -32vw -28vh var(--blue2),49vw 27vh var(--blue2),-29vw 33vh var(--blue2),-27vw 21vh var(--blue2),
     -11vw -48vh var(--blue2),-49vw 32vh var(--blue2),26vw 19vh var(--blue2),9vw -1vh var(--blue2), -19vw 29vh var(--blue2),-33vw -31vh var(--blue2),-39vw 19vh var(--blue2),-7vw 1vh var(--blue2), -27vw 8vh var(--blue2),-38vw -33vh var(--blue2),-1vw 23vh var(--blue2),5vw 40vh var(--blue2), 10vw 43vh var(--blue2),-24vw 25vh var(--blue2),32vw 17vh var(--blue2),20vw 20vh var(--blue2), 40vw 40vh var(--blue2),-25vw 0vh var(--blue2),-12vw 47vh var(--blue2),-40vw 2vh var(--blue2), -14vw -6vh var(--blue2),-9vw -32vh var(--blue2),-47vw -19vh var(--blue2),28vw 39vh var(--blue2), -20vw 44vh var(--blue2),-1vw -12vh var(--blue2),-37vw -50vh var(--blue2),19vw -24vh var(--blue2), 39vw -25vh var(--blue2),45vw -47vh var(--blue2),-8vw 41vh var(--blue2),21vw -25vh var(--blue2), -41vw -20vh var(--blue2),-39vw 21vh var(--blue2),1vw 50vh var(--blue2),39vw -46vh var(--blue2), 26vw -20vh var(--blue2);
@@ -453,7 +557,7 @@ ul.diamond {
     animation-delay:6s;
 }
 
- #stars .particles.inactive{
+ #stars .star.inactive{
     animation-play-state: paused;
 }
 
@@ -799,6 +903,12 @@ ul.diamond {
 
 #timeline img {
     width:100%;
+    margin: auto;
+    display:block;
+}
+
+#timeline #girlswhocode{
+    width: 70%;
 }
 
 @media screen and (max-width: 600px) {

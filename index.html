@@ -4,19 +4,12 @@
         <meta charset="utf-8">
         <meta name="viewport" content="width=device-width,initial-scale=1"/>
 
-        <!--<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/css/bootstrap.min.css"> -->
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.5.0/font/bootstrap-icons.css">
-        
         <link href="style.css" rel="stylesheet" type="text/css" /> 
-        <!--<link rel="stylesheet" href="https://use.typekit.net/ees8skm.css">-->
         <link rel="stylesheet" href="https://use.typekit.net/xaa5jtj.css">
         
         <title>Ellen's Universe</title>
         <link rel="icon" href="./pictures/logo.png" type="image/png"> 
-
-        <style>
-            
-        </style>
     </head>
     <body>
         <div id="menu" onclick="openMenu()">
@@ -31,7 +24,7 @@
                 <p><a onclick="linkClick('bio')">◆About◆</a></p>
                 <p><a onclick="linkClick('work')">◆Work Experiences & Skills◆</a></p>
                 <p><a onclick="linkClick('websitesBr')">◆Websites I've Created◆</a></p>
-                <p><a onclick="linkClick('art')">◆My Art◆</a></p>
+                <p><a href="art.html">◆My Art◆</a></p>
                 <p><a onclick="linkClick('connect')">◆Connect with Me!◆</a></p>
                 <br>
                 <p><a onclick="pauseAnimations()">◆Toggle <span id="toggleOnOff">off</span> animations!◆</a></p>
@@ -44,15 +37,27 @@
         
         <div id="downArrow">
             <div id="downArrowContent" onclick="scrollWindow('bio')">
-                <i class="bi bi-caret-down-fill"></i>
+                <i class="bi bi-caret-down-fill titlefade third"></i>
             </div>
         </div>
 
         <div id="stars">
-            <div class="particles"></div>
-            <div class="particles"></div>
-            <div class="particles"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
+            <div class="star"></div>
         </div>
+        <!-- <div id="stars">
+            <div class="particles"></div>
+            <div class="particles"></div>
+            <div class="particles"></div>
+        </div> -->
 
         <div id="shootingStars">
             <div class="shootingStar"></div>
@@ -72,9 +77,9 @@
 
         <div id="title">
             <div id="title-content">
-                <h1>Hey! I'm Ellen,</h1>
+                <h1 class="titlefade">Hey! I'm Ellen,</h1>
                 <br>
-                <p>and I love to <b class="highlight first">create</b> and <b class="highlight second">understand</b> worlds.</p>
+                <p class="titlefade second">and I love to <b class="highlight first">create</b> and <b class="highlight second">understand</b> worlds.</p>
             </div>     
         </div>
 
@@ -101,10 +106,11 @@
                 <div class="container left">
                     <div class="content">
                         <div>
-                            <h3 class="fade slideUp">2025-Present</h3>
+                            <h3 class="fade slideUp">Summer 2025</h3>
                             <h2 class="fade slideUp">Girls Who Code Teaching Assistant</h2>
+                            <img src="pictures/girlswhocode.png" id="girlswhocode" class="fade slideUp">
                             <ul class="diamond texts">
-                                <li class="fade slideUp text"> Taught sections of game design principles and fundamentals during the 2025 Girls Who Code Summer Immersion Program </li>
+                                <li class="fade slideUp text"> Taught game design principles and fundamentals during the 2025 Girls Who Code Summer Immersion Program </li>
                                 <li class="fade slideUp text"> Lead and mentored groups of high school girls through their development of learning the basics of programming</li>
                                 <li class="fade slideUp text"> Inspires students as a role model, encouraging sisterhood, and showcasing how their projects can make a difference in the world</li>
                             </ul>
@@ -130,6 +136,7 @@
                         <div>
                             <h3 class="fade slideUp">2022-2023</h3>
                             <h2 class="fade slideUp">Particle Physics Researcher at Argonne National Laboratory</h2>
+                            <img src="pictures/pp.png" id="pp" class="fade slideUp">
                             <ul class="diamond texts">
                                 <li class="fade slideUp text"> Developed Python algorithms to simulate various factors affecting the observed seasonal variation in multiple-muon events</li>
                                 <li class="fade slideUp text"> Created a large-scale data visualization program using the Matplotlib library to analyze and compare simulation results with experimental data from particle accelerators</li>
@@ -156,11 +163,9 @@
                     <p class="skill fade">C</p>
                     <p class="skill fade">C#</p>
                     <p class="skill fade">Assembly</p>
+                    <!-- add matlab idfk-->
                 </span>
-                
-                <!-- add C, C#, and assembly-->
             </div>
-
         </div>
         
 
@@ -222,7 +227,7 @@
                                     <div class=" texts">
                                         <p class="fade slideUp text"> A for-fun personality quiz</p>
                                         <p class="fade slideUp text"> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</p>
-                                        <p class="fade slideUp text"> Created using HTML, CSS, and JavaScript</p>
+                                        <p class="fade slideUp text"> Developed using HTML, CSS, and JavaScript</p>
                                     </div>
                                     <p class="fade slideUp last">Click on the image to visit the website!</p>
                                 </div>
@@ -267,7 +272,6 @@
             </div>
         </div>
 
-        <!-- <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script> -->
         <script src="https://kit.fontawesome.com/eea2cabe16.js" crossorigin="anonymous"></script>
         <script src="script.js"></script>
     </body>

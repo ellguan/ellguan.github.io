@@ -1,4 +1,5 @@
 var pathname = window.location.pathname;
+var isVisible = new Array();
 
 if (pathname.includes("index.html")) {
   window.addEventListener("scroll", fadein);
@@ -14,7 +15,7 @@ function scrollWindow(element) {
  scroll.scrollIntoView({behavior: "smooth"});
 }
 
-var isVisible = new Array();
+
 /*fades in elements upon scroll (only once)*/
 function fadein() {
   var reveals = document.querySelectorAll(".fade");
@@ -94,15 +95,15 @@ var clickedPaused = false;
 //Pauses all animations (including fading in)
 function pauseAnimations(){
 
-  const particles = document.getElementsByClassName("particles");
+  const stars = document.getElementsByClassName("star");
   const shootingStars = document.getElementsByClassName("shootingStar");
   const reveals = document.querySelectorAll(".fade");
   const highlights = document.getElementsByClassName("highlight")
   const downArrow = document.getElementById("downArrowContent");
 
   if (clickedPaused == false) {
-    for (var particle of particles) {
-    particle.classList.add("inactive");
+    for (var star of stars) {
+    star.classList.add("inactive");
     }
     for (var shootingStar of shootingStars) {
       shootingStar.classList.add("inactive");
@@ -122,8 +123,8 @@ function pauseAnimations(){
 
     clickedPaused = true;
   } else {
-    for (var particle of particles) {
-      particle.classList.remove("inactive");
+    for (var star of stars) {
+      star.classList.remove("inactive");
     }
     for (var shootingStar of shootingStars) {
       shootingStar.classList.remove("inactive");
@@ -155,15 +156,19 @@ function closeOverlay() {
   artOverlay.classList.remove("show");
 }
 
-// GENERATING THE PARTICLES, DON'T NEED THIS ANYMORE
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-/*
-const STAR_COUNT = 100;
-let result = "";
-for(let i = 0; i < STAR_COUNT; i++){
-  result += `${randomNumber(-50, 50)}vw ${randomNumber(-50, 50)}vh #7785ac,`;
+
+function generateStars(numStars) {
+  let result = "";
+  for(let i = 0; i < numStars; i++){
+    result += `${randomNumber(-50, 50)}vw ${randomNumber(-50, 50)}vh #7785ac,`;
+  }
+  console.log(result.substring(0, result.length - 1));
 }
-console.log(result.substring(0, result.length - 1));
-*/
+
+for (let i = 0; i < 10; i++) {
+  //generateStars(10);
+}
+
