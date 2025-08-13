@@ -95,7 +95,7 @@ ul.diamond {
     align-items: center; 
 }
 
-#shootingStars .shootingStar.inactive, .highlight.inactive{
+#shootingStars .shootingStar.inactive, .highlight.inactive, #stars .star.inactive{
     animation-play-state: paused;
 }
 
@@ -105,12 +105,28 @@ ul.diamond {
     animation-fill-mode: forwards;
 }
 
+.fade.second {
+    animation-delay: 0.3s;
+}
+
+.fade.third {
+    animation-delay: 0.6s;
+}
+
+.fade.fourth {
+    animation-delay: 0.9s;
+}
+
 .titlefade.second {
     animation-delay: 0.5s;
 }
 
 .titlefade.third{
-    animation-delay:4s;
+    animation-delay: 4s;
+}
+
+.titlefade.fourth{
+    animation-delay: 4.6s;
 }
 
 .active.fade.slideUp {
@@ -252,6 +268,18 @@ ul.diamond {
     }
     100% {
         transform: translateY(0);
+    }
+}
+
+@keyframes moveLeftAndRight {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(10px);
+    }
+    100% {
+        transform: translateX(0);
     }
 }
 
@@ -420,7 +448,7 @@ ul.diamond {
     font-size: 300%;
     /*transition: all 0.3s ease-in-out;*/
     animation: moveUpAndDown 1.5s ease-in-out infinite;
-    animation-delay:5s;
+    animation-delay:5.6s;
 }
 
 #downArrowContent i:hover {
@@ -526,83 +554,6 @@ ul.diamond {
     }
     100% {
         opacity: 0
-    }
-}
-
-#stars .particles {
-    box-shadow: 43vw 42vh var(--blue2),-39vw -33vh var(--blue2),22vw -41vh var(--blue2), 28vw 9vh var(--blue2),-12vw 15vh var(--blue2),43vw 25vh var(--blue2),45vw -26vh var(--blue2), 21vw 34vh var(--blue2),-47vw -37vh var(--blue2),-41vw 26vh var(--blue2),50vw 12vh var(--blue2), 6vw -43vh var(--blue2),-18vw -33vh var(--blue2),-2vw -21vh var(--blue2),-40vw -5vh var(--blue2), 39vw -31vh var(--blue2),27vw -40vh var(--blue2),30vw 15vh var(--blue2),0vw -13vh var(--blue2), 0vw 36vh var(--blue2),-26vw -26vh var(--blue2),27vw -13vh var(--blue2),30vw -14vh var(--blue2), 18vw -12vh var(--blue2),41vw 20vh var(--blue2),21vw 34vh var(--blue2),-13vw 34vh var(--blue2),-4vw 0vh var(--blue2),2vw -36vh var(--blue2),-31vw -42vh var(--blue2),-44vw 45vh var(--blue2),   26vw -11vh var(--blue2),-44vw -45vh var(--blue2),45vw -30vh var(--blue2),-45vw 47vh var(--blue2), 12vw 40vh var(--blue2),-11vw -44vh var(--blue2),12vw 18vh var(--blue2),-40vw 13vh var(--blue2), -29vw 22vh var(--blue2),27vw 4vh var(--blue2),-39vw 14vh var(--blue2),25vw -45vh var(--blue2), 32vw -10vh var(--blue2),-15vw 1vh var(--blue2),25vw -7vh var(--blue2),27vw -18vh var(--blue2), -25vw 8vh var(--blue2),36vw -27vh var(--blue2),-41vw -34vh var(--blue2),7vw -43vh var(--blue2), 27vw 7vh var(--blue2),22vw -9vh var(--blue2),8vw 50vh var(--blue2),28vw 6vh var(--blue2), -5vw 15vh var(--blue2),6vw 9vh var(--blue2),5vw -50vh var(--blue2),-45vw -6vh var(--blue2), -32vw -28vh var(--blue2),49vw 27vh var(--blue2),-29vw 33vh var(--blue2),-27vw 21vh var(--blue2),
-    -11vw -48vh var(--blue2),-49vw 32vh var(--blue2),26vw 19vh var(--blue2),9vw -1vh var(--blue2), -19vw 29vh var(--blue2),-33vw -31vh var(--blue2),-39vw 19vh var(--blue2),-7vw 1vh var(--blue2), -27vw 8vh var(--blue2),-38vw -33vh var(--blue2),-1vw 23vh var(--blue2),5vw 40vh var(--blue2), 10vw 43vh var(--blue2),-24vw 25vh var(--blue2),32vw 17vh var(--blue2),20vw 20vh var(--blue2), 40vw 40vh var(--blue2),-25vw 0vh var(--blue2),-12vw 47vh var(--blue2),-40vw 2vh var(--blue2), -14vw -6vh var(--blue2),-9vw -32vh var(--blue2),-47vw -19vh var(--blue2),28vw 39vh var(--blue2), -20vw 44vh var(--blue2),-1vw -12vh var(--blue2),-37vw -50vh var(--blue2),19vw -24vh var(--blue2), 39vw -25vh var(--blue2),45vw -47vh var(--blue2),-8vw 41vh var(--blue2),21vw -25vh var(--blue2), -41vw -20vh var(--blue2),-39vw 21vh var(--blue2),1vw 50vh var(--blue2),39vw -46vh var(--blue2), 26vw -20vh var(--blue2);
-    position: fixed;
-    top: 50%;
-    left:50%;
-    height: 2px;
-    width: 2px;
-    background-color: var(--blue1);
-    border-radius: 50%;
-    z-index: -1;
-    opacity: 0;
-}
-
-#stars .particles:nth-child(1) {
-    animation: zoom 9s linear infinite;
-}
-
-#stars .particles:nth-child(2) {
-    animation: zoom2 9s linear infinite;
-    animation-delay:3s;
-}
-
-#stars .particles:nth-child(3) {
-    animation: zoom3 9s linear infinite;
-    animation-delay:6s;
-}
-
- #stars .star.inactive{
-    animation-play-state: paused;
-}
-
-@keyframes zoom {
-    0%{
-        transform: scale(1);
-        opacity: 0.5;
-    }
-    95%{
-        transform: scale(1.5);
-        opacity: 0.8;
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1.5);
-    }
-}
-
-@keyframes zoom2 {
-    0%{
-        transform: scale(.7);
-        opacity: 0;
-    }
-    95%{
-        transform: scale(1.2);
-        opacity: 0.8;
-    }
-    100% {
-        opacity: 0;
-        transform: scale(1.2);
-    }
-}
-
-@keyframes zoom3 {
-    0%{
-        transform: scale(.4);
-        opacity: 0;
-    }
-    95%{
-        transform: scale(.9);
-        opacity: 0.8;
-    }
-    100% {
-        opacity: 0;
-        transform: scale(.9);
     }
 }
 
@@ -1142,7 +1093,7 @@ span p:hover {
     }
 }
 
-/*------------------------------ART------------------------------*/
+/*------------------------------ART SECTION------------------------------*/
 #art a {
     color: var(--purple1);
     font-size: 200%;
@@ -1150,39 +1101,6 @@ span p:hover {
 #art a:hover {
     color: var(--blue1);
 }
-
-.art {
-    width:90px;
-
-    /*
-    position: absolute;
-    inset-inline-start: var(--marquee-item-offset);
-    animation: go linear var(--marquee-duration) var(--marquee-delay, 0s) infinite;
-    transform: translateX(-50%);
-    */
-}
-
-.art.long {
-    width:160px;
-}
-/*
-.artwork1, .artwork2 {
-    --marquee-max-width: 90vw;
-
-    display: flex;
-    block-size: var(--marquee-item-height);
-    max-inline-size: var(--marquee-max-width);
-    position: relative;
-    overflow-x: hidden;
-    mask-image: linear-gradient(
-        to right,
-        hsl(0 0% 0% / 0),
-        hsl(0 0% 0% / 1) 20%,
-        hsl(0 0% 0% / 1) 80%,
-        hsl(0 0% 0% / 0)
-    );
-}
-    */
 
 @media screen and (max-width: 600px) {
     #art a {

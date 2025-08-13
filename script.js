@@ -1,20 +1,16 @@
 var pathname = window.location.pathname;
 var isVisible = new Array();
 
+//These actions only happen if page is index.html
 if (pathname.includes("index.html")) {
-  window.addEventListener("scroll", fadein);
-  window.onload = fadein();
   window.addEventListener("scroll", hide);
-} else if (pathname.includes("art.html")){
-
-}
+} 
 
 /* When clicked, scrolls window to element */
 function scrollWindow(element) {
  const scroll = document.getElementById(element);
  scroll.scrollIntoView({behavior: "smooth"});
 }
-
 
 /*fades in elements upon scroll (only once)*/
 function fadein() {
@@ -35,8 +31,10 @@ function fadein() {
     }
   }
 }
+window.addEventListener("scroll", fadein);
+window.onload = fadein();
 
-
+//Hides two things on the index.html page when scrolled
 function hide(){
     var windowHeight = window.innerHeight;
 
@@ -103,13 +101,17 @@ function pauseAnimations(){
 
   if (clickedPaused == false) {
     for (var star of stars) {
-    star.classList.add("inactive");
+      star.classList.add("inactive");
     }
-    for (var shootingStar of shootingStars) {
-      shootingStar.classList.add("inactive");
-    }
-    for (var highlight of highlights) {
-      highlight.classList.add("inactive");
+    if (pathname.includes("index.html")) {
+      for (var shootingStar of shootingStars) {
+        shootingStar.classList.add("inactive");
+      }
+      for (var highlight of highlights) {
+        highlight.classList.add("inactive");
+      }
+      downArrow.classList.add("paused");
+      document.getElementById('toggleOnOff').innerHTML = 'on';
     }
     for (var reveal of reveals) {
       reveal.classList.add("visible");
@@ -117,20 +119,21 @@ function pauseAnimations(){
     for (let i = 0; i < reveals.length; i++) {
       isVisible[i] = true;
     }
-    downArrow.classList.add("paused");
     document.getElementById('pauseButton').innerHTML = '<i class="bi bi-play-circle"></i>';
-    document.getElementById('toggleOnOff').innerHTML = 'on';
-
     clickedPaused = true;
   } else {
     for (var star of stars) {
       star.classList.remove("inactive");
     }
-    for (var shootingStar of shootingStars) {
-      shootingStar.classList.remove("inactive");
-    }
-    for (var highlight of highlights) {
-      highlight.classList.remove("inactive");
+    if (pathname.includes("index.html")) {
+      for (var shootingStar of shootingStars) {
+        shootingStar.classList.remove("inactive");
+      }
+      for (var highlight of highlights) {
+        highlight.classList.remove("inactive");
+      }
+      downArrow.classList.remove("paused");
+      document.getElementById('toggleOnOff').innerHTML = 'off';
     }
     for (var reveal of reveals) {
       reveal.classList.remove("visible");
@@ -139,9 +142,7 @@ function pauseAnimations(){
       isVisible[i] = false;
     }
     fadein();
-    downArrow.classList.remove("paused");
     document.getElementById('pauseButton').innerHTML = '<i class="bi bi-pause-circle"></i>';
-    document.getElementById('toggleOnOff').innerHTML = 'off';
     clickedPaused = false;
   }
   
@@ -156,10 +157,10 @@ function closeOverlay() {
   artOverlay.classList.remove("show");
 }
 
+//This is for creating the stars background
 function randomNumber(min, max) {
   return Math.floor(Math.random() * (max - min + 1)) + min;
 }
-
 function generateStars(numStars) {
   let result = "";
   for(let i = 0; i < numStars; i++){
@@ -167,7 +168,6 @@ function generateStars(numStars) {
   }
   console.log(result.substring(0, result.length - 1));
 }
-
 for (let i = 0; i < 10; i++) {
   //generateStars(10);
 }
