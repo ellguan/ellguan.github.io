@@ -12,14 +12,14 @@
         <link rel="icon" href="./pictures/logo.png" type="image/png"> 
     </head>
     <body>
-        <div id="menu" onclick="openMenu()" class="titlefade third">
+        <div id="menu" onclick="openOverlay('menuOverlay')" class="titlefade third">
             <i class="fa-solid fa-bars"></i>
         </div>
 
         <div id="menuOverlay">
             <div id="menuContent">
                 <h1>Menu</h1>
-                <a class="exit" onclick="closeMenu()">&times;</a>
+                <a class="exit" onclick="closeOverlay('menuOverlay')">&times;</a>
                 <p><a onclick="linkClick('title')">◆Home◆</a></p>
                 <p><a onclick="linkClick('bio')">◆About◆</a></p>
                 <p><a onclick="linkClick('work')">◆Work Experiences & Skills◆</a></p>
@@ -251,12 +251,12 @@
             </div>
         </div>
 
-        <div id="footer" class=""><p>Created with <i class="bi bi-heart-fill"></i> by Ellen Guan &copy; 2025 ◆ <a onclick="openCredits()">Credits</a></p></div>
+        <div id="footer" class=""><p>Created with <i class="bi bi-heart-fill"></i> by Ellen Guan &copy; 2025 ◆ <a onclick="openOverlay('creditsOverlay')">Credits</a></p></div>
         <br>
 
-        <div id="creditsOverlay">
+        <div id="creditsOverlay" onclick="closeOverlay('creditsOverlay')">
             <div id="creditsContent">
-                <a class="exit" onclick="closeCredits()">&times;</a>
+                <a class="exit" onclick="closeOverlay('creditsOverlay')">&times;</a>
                 <h1>Credits</h1>
                 <p>Like many other website designer/developer and artists, I take inspiration from others' functionality and design.</p>
                 <p>Thank you to <a href="https://dev.to/0shuvo0" target="_blank">Shuvo</a>, <a href="https://codepen.io/delroyprithvi" target="_blank">Delroy Prithvi</a>, <a href="https://winterwind.com" target="_blank">Winterwind</a>, and, of course, <a href="https://w3schools.com" target="_blank">W3Schools</a> for some of their awesome animation tricks!</p>

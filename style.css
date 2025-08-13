@@ -6,8 +6,6 @@
     box-sizing:border-box;
     transition: all 0.3s ease-in-out;
     cursor: url(pictures/default.png), default; 
-    
-    /*cursor: url('data:image/svg+xml,<svg xmlns="http://www.w3.org/2000/svg" width="48" height="48" viewBox="0 0 24 24"><path fill="%23000" d="m12 0 12 12-12 12L0 12z"></path></svg>'), auto;*/
 
     /*variables*/
     --pointer: url(pictures/pointer.png), pointer;
@@ -147,7 +145,6 @@ ul.diamond {
     animation-fill-mode: forwards;
 }
 
-/*linear-gradient(90deg, var(--blue1), var(--purple1), var(--green));*/
 .highlight {
     background-image: linear-gradient(to right, transparent, var(--blue1));
     background-size: 200% 100%;
@@ -180,26 +177,6 @@ ul.diamond {
 
 .fade.slideUp.last {
     animation-delay: calc(var(--transitionDelayAll) * 4);
-}
-
-.test {
-    display: flex;
-    justify-content:center;
-}
-
-/* WILL EDIT*/
-.typewriter {
-    overflow: hidden; /* Ensures the content is not revealed until the animation */
-    border-right: .15em solid var(--green); /* The typwriter cursor */
-    white-space: nowrap; /* Keeps the content on a single line */
-    margin: 0 auto; /* Gives that scrolling effect as the typing happens */
-    /* letter-spacing: .2em; /* Adjusts the spacing between characters */
-    animation: typing 3s steps(17, end), blink-caret .75s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 50%; }
 }
 
 @keyframes blink-caret {
@@ -446,7 +423,6 @@ ul.diamond {
     top:-100%;
     color:var(--green);
     font-size: 300%;
-    /*transition: all 0.3s ease-in-out;*/
     animation: moveUpAndDown 1.5s ease-in-out infinite;
     animation-delay:5.6s;
 }
@@ -778,7 +754,6 @@ ul.diamond {
 
 #timeline {
     position:relative;
-    /*max-width:1200;*/
     margin: 0 auto;
     color:var(--purple1);
 }
@@ -831,7 +806,6 @@ ul.diamond {
     padding: 20px 20px;
     background-color: var(--green);
     position: relative;
-    /*transition: all 0.3s ease-in-out;*/
 }
 
 /*for desktop only*/
@@ -995,7 +969,6 @@ span p:hover {
     grid-template-rows: repeat(var(--cards), var(--cardHeight));
     gap: var(--cardMargin);
     padding-bottom: calc(var(--cards) * var(--cardTopPadding));
-    
 }
 
 #card1 {
@@ -1017,8 +990,7 @@ span p:hover {
 .card {
 	position: sticky;
 	top: 20%;
-	padding-top: calc(var(--index) * var(--cardTopPadding));
-    
+	padding-top: calc(var(--index) * var(--cardTopPadding)); 
 }
 
 #card1 .card-content {
@@ -1039,11 +1011,6 @@ span p:hover {
 
 .card-content {
     height: var(--cardHeight);
-    /*
-	justify-content: center;
-    */
-	/*transition: all 0.5s;*/
-
     display: flex;
     align-items: center;
     text-align:left;

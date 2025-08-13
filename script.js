@@ -59,34 +59,34 @@ function hide(){
     
 }
 
-//These functions open and close the menu overlay & credits overlay
-var menuOverlay = document.getElementById("menuOverlay");
-function openMenu() {
-  menuOverlay.classList.add("show");
+//These functions open and close overlays
+function openOverlay(overlay) {
+  document.getElementById(overlay).classList.add("show");
 }
-function closeMenu() {
-  menuOverlay.classList.remove("show");
+function openOverlay(overlay, image) {
+  document.getElementById(overlay).classList.add("show");
+  if (overlay == "artOverlay") {
+    document.getElementById("artOverlayContent").innerHTML = '<img src="' + image + '" class="overlayImage">';
+  }
 }
-var creditsOverlay = document.getElementById("creditsOverlay");
-function openCredits() {
-  creditsOverlay.classList.add("show");
+function closeOverlay(overlay) {
+  document.getElementById(overlay).classList.remove("show");
 }
-function closeCredits() {
-  creditsOverlay.classList.remove("show");
-}
+var menuOverlay = document.getElementById('menuOverlay');
+var creditsOverlay = document.getElementById('creditsOverlay');
 window.onclick = function(event) {
   if (event.target == menuOverlay) {
-    closeMenu();
+    closeOverlay('menuOverlay');
   }
   if (event.target == creditsOverlay) {
-    closeCredits();
+    closeOverlay('creditsOverlay');
   }
 }
 
 // When a link in the menu is clicked, scrolls to the element and closes the menu
 function linkClick(element) {
   scrollWindow(element);
-  closeMenu();
+  closeOverlay('menuOverlay');
 }
 
 var clickedPaused = false;
@@ -146,15 +146,6 @@ function pauseAnimations(){
     clickedPaused = false;
   }
   
-}
-
-var artOverlay = document.getElementById("artOverlay");
-function openOverlay(image) {
-  artOverlay.classList.add("show");
-  document.getElementById("artOverlayContent").innerHTML = '<img src="' + image + '" class="overlayImage">';
-}
-function closeOverlay() {
-  artOverlay.classList.remove("show");
 }
 
 //This is for creating the stars background
