@@ -1,8 +1,8 @@
 var pathname = window.location.pathname;
 var isVisible = new Array();
 
-//These actions only happen if page is index.html
-if (pathname.includes("index.html")) {
+//These actions only happen if page is index.html (and not art.html)
+if (!pathname.includes("art.html")) {
   window.addEventListener("scroll", hide);
 } 
 
