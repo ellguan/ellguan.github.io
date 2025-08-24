@@ -16,6 +16,8 @@
     --blue2: #9ac6c5;
     --green: #a5e6ba;
 
+    --fontFamily: "futura-pt", sans-serif;
+
     --paddingAll: 5%;
     --transitionDelayAll: .5s;
 
@@ -26,7 +28,7 @@
     --cardMargin: 5dvw;
 
     --skills: 8;
-    --skillTransitionDelay: .3s;
+    --skillTransitionDelay: .2s;
 }
 
 body{
@@ -47,13 +49,13 @@ a:hover {
 
 h1{
     /*font-family: "bd-colonius", sans-serif;*/
-    font-size:500%;
+    font-size:350%;
     font-family: "omnium", sans-serif;
     font-weight: 700;
 }
 
 h2, h3, p, ul, a {
-    font-family: "futura-pt", sans-serif;
+    font-family: var(--fontFamily);
 }
 
 ul {
@@ -832,8 +834,8 @@ ul.diamond {
     display:block;
 }
 
-#timeline #girlswhocode{
-    width: 70%;
+#timeline #girlswhocode, #timeline #pp{
+    width: 50%;
 }
 
 @media screen and (max-width: 600px) {
@@ -862,30 +864,66 @@ ul.diamond {
 }
 
 /*-------------------------------SKILLS------------------------------*/
+.skills .skill{
+    position:relative;
+}
+.skills .skill::after {
+    width: 100%;
+    font-family: var(--fontFamily);
+    font-size: 25%;
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    transform: translateX(25%) ;
+}
 
 .skills .skill:nth-child(1) {
     animation-delay: calc(var(--skillTransitionDelay) * 1);
 }
+#skill1::after {
+    content:'Python';
+}
 .skills .skill:nth-child(2) {
     animation-delay: calc(var(--skillTransitionDelay) * 2);
+}
+#skill2::after {
+    content:'Java';
 }
 .skills .skill:nth-child(3) {
     animation-delay: calc(var(--skillTransitionDelay) * 3);
 }
+#skill3::after {
+    content:'JavaScript';
+}
 .skills .skill:nth-child(4) {
     animation-delay: calc(var(--skillTransitionDelay) * 4);
+}
+#skill4::after {
+    content:'HTML5';
 }
 .skills .skill:nth-child(5) {
     animation-delay: calc(var(--skillTransitionDelay) * 5);
 }
+.skills .skill:nth-child(5)::after {
+    content:'CSS3';
+}
 .skills .skill:nth-child(6) {
     animation-delay: calc(var(--skillTransitionDelay) * 6);
+}
+.skills .skill:nth-child(6)::after {
+    content:'SQL';
 }
 .skills .skill:nth-child(7) {
     animation-delay: calc(var(--skillTransitionDelay) * 7);
 }
+.skills .skill:nth-child(7)::after {
+    content:'Git';
+}
 .skills .skill:nth-child(8) {
     animation-delay: calc(var(--skillTransitionDelay) * 8);
+}
+.skills .skill:nth-child(8)::after {
+    content:'PHP';
 }
 .skills span .skill:nth-child(1) {
     animation-delay: calc(var(--skillTransitionDelay) * 9);
@@ -935,8 +973,9 @@ span p:hover {
 /*------------------------------WEBSITES------------------------------*/
 
 #websitesTitle {
-    position:sticky;
-    top:5%;
+    /* position:sticky;
+    top:5%; */
+    padding-bottom: 5%;
 }
 
 .webimage, .webgif {
@@ -991,9 +1030,9 @@ span p:hover {
 }
 
 .card {
-	position: sticky;
-	top: 20%;
-	padding-top: calc(var(--index) * var(--cardTopPadding)); 
+	/* position: sticky; */
+	/* top: 20%; */
+	/* padding-top: calc(var(--index) * var(--cardTopPadding));  */
 }
 
 #card1 .card-content {
@@ -1009,7 +1048,7 @@ span p:hover {
 }
 
 .card h2 {
-    font-size: 300%;
+    font-size: 200%;
 }
 
 .card-content {
