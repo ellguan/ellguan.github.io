@@ -59,6 +59,21 @@ function hide(){
     
 }
 
+window.addEventListener("scroll", goHomeArrowShow);
+//shows the go home arrow upon scroll
+function goHomeArrowShow() {
+  var goHomeArrow = document.getElementById("goHomeArrow");
+  var windowHeight = window.innerHeight;
+  var bio = document.getElementById("bio");
+  var bioTop = bio.getBoundingClientRect().top;
+
+  if (bioTop < windowHeight - 300) {
+    goHomeArrow.classList.add("active");
+  } else {
+    goHomeArrow.classList.remove("active");
+  }
+}
+
 //These functions open and close overlays
 function openOverlay(overlay) {
   document.getElementById(overlay).classList.add("show");
@@ -89,6 +104,10 @@ function linkClick(element) {
   closeOverlay('menuOverlay');
 }
 
+function goTo(element) {
+  window.location.href = element;
+}
+
 var clickedPaused = false;
 //Pauses all animations (including fading in)
 function pauseAnimations(){
@@ -103,7 +122,7 @@ function pauseAnimations(){
     for (var star of stars) {
       star.classList.add("inactive");
     }
-    if (pathname.includes("index.html")) {
+    if (!pathname.includes("art.html")) {
       for (var shootingStar of shootingStars) {
         shootingStar.classList.add("inactive");
       }
@@ -111,7 +130,7 @@ function pauseAnimations(){
         highlight.classList.add("inactive");
       }
       downArrow.classList.add("paused");
-      document.getElementById('toggleOnOff').innerHTML = 'on';
+      //document.getElementById('toggleOnOff').innerHTML = 'on';
     }
     for (var reveal of reveals) {
       reveal.classList.add("visible");
@@ -125,7 +144,7 @@ function pauseAnimations(){
     for (var star of stars) {
       star.classList.remove("inactive");
     }
-    if (pathname.includes("index.html")) {
+    if (!pathname.includes("art.html")) {
       for (var shootingStar of shootingStars) {
         shootingStar.classList.remove("inactive");
       }
@@ -133,7 +152,7 @@ function pauseAnimations(){
         highlight.classList.remove("inactive");
       }
       downArrow.classList.remove("paused");
-      document.getElementById('toggleOnOff').innerHTML = 'off';
+      //document.getElementById('toggleOnOff').innerHTML = 'off';
     }
     for (var reveal of reveals) {
       reveal.classList.remove("visible");

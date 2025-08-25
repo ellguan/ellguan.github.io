@@ -118,15 +118,19 @@ ul.diamond {
 }
 
 .titlefade.second {
-    animation-delay: 0.5s;
+    animation-delay: 1s;
 }
 
-.titlefade.third{
-    animation-delay: 4s;
+.titlefade.third {
+    animation-delay: 2s;
 }
 
-.titlefade.fourth{
-    animation-delay: 4.6s;
+.titlefade.fourth {
+    animation-delay: 3s;
+}
+
+.titlefade.fifth{
+    animation-delay: 5s;
 }
 
 .active.fade.slideUp {
@@ -384,20 +388,19 @@ ul.diamond {
 /*------------------------------PAUSE BUTTON------------------------------*/
 #pauseButton {
     position: fixed;
-    bottom: 5%;
+    top: 5%;
     right: 2%;
     z-index: 2;
     color: var(--green);
     font-size: 150%;
     background-color:var(--blue1);
     padding: 1%;
-    border-radius:50%;
     display: flex;
     justify-content: center;
     align-items: center; 
 }
 
-#pauseButton:hover {
+#pauseButton:hover, #goHomeArrow:hover {
     color: var(--blue2);
     background-color: var(--purple2);
     cursor: var(--pointer);
@@ -407,6 +410,29 @@ ul.diamond {
     cursor: var(--pointer);
 }
 
+/*------------------------------GO HOME ARROW------------------------------*/
+#goHomeArrow {
+    position: fixed;
+    bottom: 5%;
+    right: 2%;
+    z-index: 2;
+    color: var(--green);
+    font-size: 150%;
+    background-color:var(--blue1);
+    padding: 1%;
+    display: flex;
+    justify-content: center;
+    align-items: center; 
+
+    visibility: hidden;
+    opacity: 0;
+    transition: opacity .5s ease-in-out;
+}
+#goHomeArrow.active {
+    visibility: visible;
+    opacity: 1;
+}
+
 /*------------------------------DOWN ARROW------------------------------*/
 
 #downArrow {
@@ -414,7 +440,7 @@ ul.diamond {
     height: 0px;
     overflow: visible;
     top:85%;
-    right: 45%;
+    right: 47%;
     width: max-content;
     margin-left:auto;
     z-index: 1;
@@ -687,11 +713,26 @@ ul.diamond {
 }
 
 #title h1{
-    font-size:900%;
+    font-size:700%;
 }
 
 #title p{
-    font-size:300%;
+    font-size:150%;
+}
+
+#title span p {
+    display: inline-block;
+}
+
+#title .titlelink {
+    padding:2%;
+    margin: 1%;
+    background-color: var(--blue1);
+}
+
+#title .titlelink:hover {
+    background-color: var(--purple2);
+    cursor:var(--pointer);
 }
 
 @media screen and (max-width: 600px) {
@@ -700,14 +741,14 @@ ul.diamond {
     }
 
     #title p {
-        font-size:350%;
+        font-size:150%;
     }
 
 }
 
 /*------------------------------BIO------------------------------*/
 #bio p {
-    font-size:150%;
+    font-size:120%;
 }
 
 #bio-image {
@@ -861,6 +902,10 @@ ul.diamond {
     #timeline .right {
         left: 0%;
     }
+
+    #timeline #pp{
+        width: 70%;
+    }
 }
 
 /*-------------------------------SKILLS------------------------------*/
@@ -912,6 +957,7 @@ ul.diamond {
 }
 .skills .skill:nth-child(6)::after {
     content:'SQL';
+    font-weight: normal;
 }
 .skills .skill:nth-child(7) {
     animation-delay: calc(var(--skillTransitionDelay) * 7);
@@ -1105,7 +1151,7 @@ span p:hover {
 /*------------------------------ART SECTION------------------------------*/
 #art a {
     color: var(--purple1);
-    font-size: 200%;
+    font-size: 150%;
 }
 #art a:hover {
     color: var(--blue1);
