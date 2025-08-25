@@ -1193,11 +1193,11 @@ span p:hover {
 /*------------------------------CREDITS------------------------------*/
 
 #creditsOverlay a {
-    color: var(--blue2);
+    color: var(--blue1);
 }
 
 #creditsOverlay a:hover {
-    color:var(--blue1);
+    color:var(--purple2);
 }
 
 /*------------------------------ART PAGE------------------------------*/
