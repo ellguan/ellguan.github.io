@@ -75,15 +75,14 @@
         <div id="title">
             <div id="title-content">
                 <h1 class="titlefade">Ellen Guan</h1>
-                <br>
                 <p class="titlefade second">Engineer ◆ Researcher ◆ Dreamer ◆ Artist</p>
                 <p class="titlefade third">Welcome to my universe!</p>
                 <br>
                 <span>
-                    <p class="titlefade fourth titlelink" onclick="scrollWindow('bio')">About</p>
-                    <p class="titlefade fourth titlelink" onclick="scrollWindow('work')">Work</p>
-                    <p class="titlefade fourth titlelink" onclick="scrollWindow('websitesBr')">Projects</p>
-                    <p class="titlefade fourth titlelink" onclick="goTo('art.html')">Art</p>
+                    <p class="titlefade fourth titlelink" id="aboutButton" onclick="scrollWindow('bio')">About</p>
+                    <p class="titlefade fourth titlelink" id="workButton" onclick="scrollWindow('work')">Work</p>
+                    <p class="titlefade fourth titlelink" id="projectsButton" onclick="scrollWindow('websitesBr')">Projects</p>
+                    <p class="titlefade fourth titlelink" id="artButton" onclick="goTo('art.html')">Art</p>
                 </span>
 
                 <!-- <h1 class="titlefade">Hey, I'm Ellen!</h1>
@@ -98,30 +97,30 @@
                     <img src="pictures/me.jpg" id="me" class="fade">
                 </div>
                 <div id="bio-content">
-                    <h1 class="fade slideLeft">About Me</h1>
+                    <h1 class="fade   ">About Me</h1>
                     <div id="bio-text" class="texts">
-                        <p class="fade slideLeft text">I am currently an undergraduate student at <b>Princeton University</b> studying <b>Computer and Electrical Engineering</b>, with a passion for <b>fullstack and frontend web development.</b></p>
-                        <p class="fade slideLeft text">My current <b>research interests</b> include quantum computing, information science, and optics. </p>
-                        <p class="fade slideLeft text">In my free time, I enjoy experimenting with all things art and design!</p>
+                        <p class="fade    text">I am currently an undergraduate student at <b>Princeton University</b> studying <b>Computer and Electrical Engineering</b>, with a passion for <b>fullstack and frontend web development.</b></p>
+                        <p class="fade    text">My current <b>research interests</b> include quantum computing, information science, and optics. </p>
+                        <p class="fade    text">In my free time, I enjoy experimenting with all things art and design!</p>
                     </div>
                 </div>
             </div>
         </div>
 
         <div id="work" class="transparent">
-            <h1 class="fade slideUp">Highlighted Work Experiences</h1>
+            <h1 class="fade  ">Highlighted Work Experiences</h1>
             <br>
             <div id="timeline">
                 <div class="container left">
                     <div class="content">
                         <div>
-                            <h3 class="fade slideUp">Summer 2025</h3>
-                            <h2 class="fade slideUp">Girls Who Code Teaching Assistant</h2>
-                            <img src="pictures/girlswhocode.png" id="girlswhocode" class="fade slideUp">
+                            <h3 class="fade  ">Summer 2025</h3>
+                            <h2 class="fade  ">Girls Who Code Teaching Assistant</h2>
+                            <img src="pictures/girlswhocodeOLD.png" id="girlswhocode" class="fade  ">
                             <ul class="diamond texts">
-                                <li class="fade slideUp text"> Taught game design principles and fundamentals during the 2025 Girls Who Code Summer Immersion Program </li>
-                                <li class="fade slideUp text"> Lead and mentored groups of high school girls through their development of learning the basics of programming</li>
-                                <li class="fade slideUp text"> Inspires students as a role model, encouraging sisterhood, and showcasing how their projects can make a difference in the world</li>
+                                <li class="fade   text"> Taught game design principles and fundamentals during the 2025 Girls Who Code Summer Immersion Program </li>
+                                <li class="fade   text"> Lead and mentored groups of high school girls through their development of learning the basics of programming</li>
+                                <li class="fade   text"> Inspires students as a role model, encouraging sisterhood, and showcasing how their projects can make a difference in the world</li>
                             </ul>
                         </div>
                     </div>
@@ -129,12 +128,12 @@
                 <div class="container right">
                     <div class="content">
                         <div>
-                            <h3 class="fade slideUp">2023-2024</h3>
-                            <h2 class="fade slideUp">Quantum Mechanics Researcher at Argonne National Laboratory</h2>
-                            <img src="pictures/entanglement.png" id="quantum" class="fade slideUp">
+                            <h3 class="fade  ">2023-2024</h3>
+                            <h2 class="fade  ">Quantum Mechanics Researcher at Argonne National Laboratory</h2>
+                            <img src="pictures/entanglementOLD.png" id="quantum" class="fade  ">
                             <ul class="diamond texts">
-                                <li class="fade slideUp text"> Analyzed multiple research papers on quantum entanglement and the geometric measurement of entanglement</li>
-                                <li class="fade slideUp text"> Wrote a literature review about the history of the measurement and how it is understood for arbitrary two-qubit pure states, two-qubit mixed states, and certain multipartite mixed states.</li>
+                                <li class="fade   text"> Analyzed multiple research papers on quantum entanglement and the geometric measurement of entanglement</li>
+                                <li class="fade   text"> Wrote a literature review about the history of the measurement and how it is understood for arbitrary two-qubit pure states, two-qubit mixed states, and certain multipartite mixed states.</li>
                             </ul>
                             
                         </div>
@@ -143,13 +142,13 @@
                 <div class="container left">
                     <div class="content">
                         <div>
-                            <h3 class="fade slideUp">2022-2023</h3>
-                            <h2 class="fade slideUp">Particle Physics Researcher at Argonne National Laboratory</h2>
-                            <img src="pictures/pp.png" id="pp" class="fade slideUp">
+                            <h3 class="fade  ">2022-2023</h3>
+                            <h2 class="fade  ">Particle Physics Researcher at Argonne National Laboratory</h2>
+                            <img src="pictures/ppOLD.png" id="pp" class="fade  ">
                             <ul class="diamond texts">
-                                <li class="fade slideUp text"> Developed Python algorithms to simulate various factors affecting the observed seasonal variation in multiple-muon events</li>
-                                <li class="fade slideUp text"> Created a large-scale data visualization program using the Matplotlib library to analyze and compare simulation results with experimental data from particle accelerators</li>
-                                <li class="fade slideUp text"> My research paper can be found <a href="https://arxiv.org/abs/2310.10009" target="_blank">here</a></li>
+                                <li class="fade   text"> Developed Python algorithms to simulate various factors affecting the observed seasonal variation in multiple-muon events</li>
+                                <li class="fade   text"> Created a large-scale data visualization program using the Matplotlib library to analyze and compare simulation results with experimental data from particle accelerators</li>
+                                <li class="fade   text"> My research paper can be found <a href="https://arxiv.org/abs/2310.10009" target="_blank">here</a></li>
                             </ul>
                         </div>
                     </div>
@@ -158,7 +157,7 @@
         </div>
 
         <div id="skills" class="solid">
-            <h1 class="fade slideLeft">My Skills</h1>
+            <h1 class="fade   ">My Skills</h1>
             <div class="skills">
                 <i class="fa-brands fa-python skill fade " id="skill1"></i>
                 <i class="fa-brands fa-java skill fade " id="skill2"></i>
@@ -180,7 +179,7 @@
 
         <div id="websites" class="transparent">
             <br id="websitesBr">
-            <h1 id="websitesTitle" class="fade slideUp">Websites I've Created</h1>
+            <h1 id="websitesTitle" class="fade  ">Websites I've Created</h1>
 
             <div id="container">
                 <ul id="cards">
@@ -195,11 +194,11 @@
                                     <div class="card-actual-content-inner">
                                         <h2 class="fade">Be HAAPI, Eat Noodles</h2>
                                         <div class=" texts">
-                                            <p class="fade slideUp text"> Simulates an online AAPI noodle shop experience for the Future Business Leaders of America (FBLA) event Website Design</p>
-                                            <p class="fade slideUp text"> Created with HTML, CSS, JavaScript, PHP, and SQL</p>
-                                            <p class="fade slideUp text"> Won 10th place during the 2023 FBLA National Leadership Conference</p>
+                                            <p class="fade   text"> Simulates an online AAPI noodle shop experience for the Future Business Leaders of America (FBLA) event Website Design</p>
+                                            <p class="fade   text"> Created with HTML, CSS, JavaScript, PHP, and SQL</p>
+                                            <p class="fade   text"> Won 10th place during the 2023 FBLA National Leadership Conference</p>
                                         </div>
-                                        <p class="fade slideUp last">Click on the image to visit the website!</p>
+                                        <p class="fade   last">Click on the image to visit the website!</p>
                                     </div>
                                 </div> 
                             </div>
@@ -215,11 +214,11 @@
                                 <div class="card-actual-content">
                                     <h2 class="fade">Her Art of Theory</h2>
                                     <div class=" texts">
-                                        <p class="fade slideUp text"> A platform spreading awareness on the gender gap in STEM jobs</p>
-                                        <p class="fade slideUp text"> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</p>
-                                        <p class="fade slideUp text"> Developed using HTML, CSS, and JavaScript</p>
+                                        <p class="fade   text"> A platform spreading awareness on the gender gap in STEM jobs</p>
+                                        <p class="fade   text"> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</p>
+                                        <p class="fade   text"> Developed using HTML, CSS, and JavaScript</p>
                                     </div>
-                                    <p class="fade slideUp last">Click on the image to visit the website!</p>
+                                    <p class="fade   last">Click on the image to visit the website!</p>
                                 </div>
                             </div>
                         </div>
@@ -233,11 +232,11 @@
                                 <div class="card-actual-content">
                                     <h2 class="fade">What Major Are You?</h2>
                                     <div class=" texts">
-                                        <p class="fade slideUp text"> A for-fun personality quiz</p>
-                                        <p class="fade slideUp text"> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</p>
-                                        <p class="fade slideUp text"> Developed using HTML, CSS, and JavaScript</p>
+                                        <p class="fade   text"> A for-fun personality quiz</p>
+                                        <p class="fade   text"> Created during the 2022 Girls Who Code Summer Immersion Program on Website Development</p>
+                                        <p class="fade   text"> Developed using HTML, CSS, and JavaScript</p>
                                     </div>
-                                    <p class="fade slideUp last">Click on the image to visit the website!</p>
+                                    <p class="fade   last">Click on the image to visit the website!</p>
                                 </div>
                             </div>
                         </div>
@@ -248,7 +247,7 @@
 
         <div id="art" class="solid">
             <h1 class="fade">My Art</h1>
-            <a href="art.html" class="fade">Click here to view a small snapshot of my creations! →</a>
+            <a onclick="goTo('art.html')" class="fade">Click here to view a small snapshot of my creations! →</a>
         </div>
 
         <div id="connect" class="transparent">

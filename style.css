@@ -10,11 +10,16 @@
     /*variables*/
     --pointer: url(pictures/pointer.png), pointer;
 
-    --purple1: #360568;
-    --purple2: #5b2a86;
-    --blue1: #7785ac;
-    --blue2: #9ac6c5;
-    --green: #a5e6ba;
+    /* --purple1: #360568; */
+    --purple1: #060a40;
+    --purple2: #2a2c7d;
+    /* --purple2: #5b2a86; */
+    --blue1: #5d3ea5;
+    --blue2: #3d277f;
+    /* --blue1: #7785ac; */
+    /* --blue2: #9ac6c5; */
+    --green: #b0f8fa;
+    /* --green: #a5e6ba; */
 
     --fontFamily: "futura-pt", sans-serif;
 
@@ -50,8 +55,9 @@ a:hover {
 h1{
     /*font-family: "bd-colonius", sans-serif;*/
     font-size:350%;
-    font-family: "omnium", sans-serif;
-    font-weight: 700;
+    font-family: "zooja-pro", sans-serif;
+    /* font-family: "omnium", sans-serif; */
+    font-weight: 500;
 }
 
 h2, h3, p, ul, a {
@@ -181,7 +187,7 @@ ul.diamond {
     animation-delay: calc(var(--transitionDelayAll) * 3);
 }
 
-.fade.slideUp.last {
+.fade.last {
     animation-delay: calc(var(--transitionDelayAll) * 4);
 }
 
@@ -393,7 +399,7 @@ ul.diamond {
     z-index: 2;
     color: var(--green);
     font-size: 150%;
-    background-color:var(--blue1);
+    background-color:var(--purple2);
     padding: 1%;
     display: flex;
     justify-content: center;
@@ -401,8 +407,8 @@ ul.diamond {
 }
 
 #pauseButton:hover, #goHomeArrow:hover {
-    color: var(--blue2);
-    background-color: var(--purple2);
+    /* color: var(--blue2); */
+    background-color: var(--blue1);
     cursor: var(--pointer);
 }
 
@@ -418,7 +424,7 @@ ul.diamond {
     z-index: 2;
     color: var(--green);
     font-size: 150%;
-    background-color:var(--blue1);
+    background-color:var(--purple2);
     padding: 1%;
     display: flex;
     justify-content: center;
@@ -426,7 +432,7 @@ ul.diamond {
 
     visibility: hidden;
     opacity: 0;
-    transition: opacity .5s ease-in-out;
+    transition: all 0.5s ease-in-out;
 }
 #goHomeArrow.active {
     visibility: visible;
@@ -469,13 +475,13 @@ ul.diamond {
     position: fixed;
     top: 50%;
     left:50%;
-    background-color: var(--blue1);
+    background-color: var(--green);
     border-radius: 50%;
     z-index: -1;
     opacity: 0;
     animation-name: blinking;
     animation-iteration-count: infinite;
-
+    color:var(--green);
 }
 
 #stars .star:nth-child(1) {
@@ -570,6 +576,7 @@ ul.diamond {
     height: 100dvh;
     z-index: -1;
     overflow: hidden;
+    opacity:0.5;
 }
 
 .shootingStar {
@@ -578,7 +585,7 @@ ul.diamond {
     left:90%;
     width: 4px;
     height: 4px;
-    background-color: var(--blue1);
+    background-color: var(--green);
     border-radius: 50%;
     animation: shootingStar 3s linear infinite;
     opacity:0;
@@ -590,10 +597,10 @@ ul.diamond {
     top: 50%;
     width: 50px;
     height: 2px;
-    background-color: var(--blue1);
+    background-color: var(--green);
     transform-origin: left;
     transform: translateY(-50%);
-    background: linear-gradient(90deg, var(--blue1),transparent);
+    background: linear-gradient(90deg, var(--green),transparent);
 }
 
 .shootingStar:nth-child(2n)::before {
@@ -727,11 +734,11 @@ ul.diamond {
 #title .titlelink {
     padding:2%;
     margin: 1%;
-    background-color: var(--blue1);
+    background-color: var(--purple2);
 }
 
 #title .titlelink:hover {
-    background-color: var(--purple2);
+    background-color: var(--blue1);
     cursor:var(--pointer);
 }
 
@@ -856,7 +863,7 @@ ul.diamond {
 
     #timeline .content:hover {
         transform: scale(1.02, 1.02);
-        box-shadow: 5px 10px var(--blue2);
+        box-shadow: 5px 10px var(--purple2);
     }
 
 }
@@ -870,7 +877,7 @@ ul.diamond {
 }
 
 #timeline img {
-    width:100%;
+    width:80%;
     margin: auto;
     display:block;
 }
@@ -901,6 +908,10 @@ ul.diamond {
     /* Make all right containers behave like the left ones */
     #timeline .right {
         left: 0%;
+    }
+
+    #timeline img {
+        width: 100%;
     }
 
     #timeline #pp{
@@ -1067,7 +1078,7 @@ span p:hover {
 	--index: 2;
 }
 
-#card1, #card2 {
+#card1 {
     color:var(--purple1);
 }
 
@@ -1086,7 +1097,7 @@ span p:hover {
 }
 
 #card2 .card-content {
-    background-color: var(--blue2);
+    background-color: var(--blue1);
 }
 
 #card3 .card-content {
@@ -1119,7 +1130,7 @@ span p:hover {
   padding: 2px;
 }
 
-#websites #card3 .texts p:before {
+#websites #card3 .texts p:before, #websites #card2 .texts p:before {
   color: var(--green);
 }
 
@@ -1193,7 +1204,7 @@ span p:hover {
 
 #artTitle { 
     text-align: center;
-    color: #a5e6ba;
+    color: var(--green);
     padding:5%;
 }
 
