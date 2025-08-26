@@ -31,11 +31,9 @@
             </div>
         </div> -->
 
-        <div id="pauseButton" onclick="pauseAnimations()" class="">
-            <i class="bi bi-pause-circle"></i>
-        </div>
+        
 
-        <div id="goHomeArrow" onclick="scrollWindow('title')">↑</div>
+        <div id="goHomeArrow" onclick="scrollWindow('home')">↑</div>
         
         <div id="downArrow">
             <div id="downArrowContent" onclick="scrollWindow('bio')">
@@ -72,23 +70,38 @@
             <div class="shootingStar"></div>
         </div>
 
-        <div id="title">
-            <div id="title-content">
-                <h1 class="titlefade">Ellen Guan</h1>
-                <p class="titlefade second">Engineer ◆ Researcher ◆ Dreamer ◆ Artist</p>
-                <p class="titlefade third">Welcome to my universe!</p>
-                <br>
-                <span>
-                    <p class="titlefade fourth titlelink" id="aboutButton" onclick="scrollWindow('bio')">About</p>
-                    <p class="titlefade fourth titlelink" id="workButton" onclick="scrollWindow('work')">Work</p>
-                    <p class="titlefade fourth titlelink" id="projectsButton" onclick="scrollWindow('websitesBr')">Projects</p>
-                    <p class="titlefade fourth titlelink" id="artButton" onclick="goTo('art.html')">Art</p>
-                </span>
+        <div id="home">
+            <div id="menuBar">
+                <p class="  titlelink" id="homeButton" onclick="scrollWindow('home')">Home</p>
+                <p class="  titlelink" id="aboutButton" onclick="scrollWindow('bio')">About</p>
+                <p class="  titlelink" id="workButton" onclick="scrollWindow('work')">Work Experiences</p>
+                <p class=" titlelink" id="projectsButton" onclick="scrollWindow('websitesBr')">Projects</p>
+                <p class=" titlelink" id="artButton" onclick="goTo('art.html')">Art</p>
+                <div id="pauseButton" onclick="pauseAnimations()" class="">
+                    <p><i  class="bi bi-pause-circle"></i></p>
+                </div>
+            </div>
+            <div id="title">
+                <div id="title-content">
+                    <h1 class="titlefade">Ellen Guan</h1>
+                    <!-- <p class="titlefade second">Engineer ◆ Researcher ◆ Dreamer ◆ Artist</p> -->
+                    <p class="titlefade second">I love <b>creating</b> and <b>understanding</b> universes, chasing ideas like shooting stars do. </p>
+                    <br>
+                    <br>
+                    <p class="titlefade third" id="welcomeTitle">Welcome to my universe!</p>
+                    <br>
+                    <!-- <span>
+                        <p class="titlefade fourth titlelink" id="aboutButton" onclick="scrollWindow('bio')">About</p>
+                        <p class="titlefade fourth titlelink" id="workButton" onclick="scrollWindow('work')">Work Experiences</p>
+                        <p class="titlefade fourth titlelink" id="projectsButton" onclick="scrollWindow('websitesBr')">Projects</p>
+                        <p class="titlefade fourth titlelink" id="artButton" onclick="goTo('art.html')">Art</p>
+                    </span> -->
 
-                <!-- <h1 class="titlefade">Hey, I'm Ellen!</h1>
-                <br>
-                <p class="titlefade second">I love to <b class="highlight first">create</b> and <b class="highlight second">understand</b> worlds.</p> -->
-            </div>     
+                    <!-- <h1 class="titlefade">Hey, I'm Ellen!</h1>
+                    <br>
+                    <p class="titlefade second">I love to <b class="highlight first">create</b> and <b class="highlight second">understand</b> worlds.</p> -->
+                </div> 
+            </div>    
         </div>
 
         <div id="bio" class="solid">
@@ -99,9 +112,8 @@
                 <div id="bio-content">
                     <h1 class="fade   ">About Me</h1>
                     <div id="bio-text" class="texts">
-                        <p class="fade    text">I am currently an undergraduate student at <b>Princeton University</b> studying <b>Computer and Electrical Engineering</b>, with a passion for <b>fullstack and frontend web development.</b></p>
-                        <p class="fade    text">My current <b>research interests</b> include quantum computing, information science, and optics. </p>
-                        <p class="fade    text">In my free time, I enjoy experimenting with all things art and design!</p>
+                        <p class="fade text">I am currently an undergraduate student at <b>Princeton University</b> studying <b>Electrical and Computer Engineering</b>. My current <b>research interests</b> include quantum computing, information science, and optics. </p>
+                        <p class="fade text">Beyond fullstack website development, I enjoy experimenting with all things art and design in my free time!</p>
                     </div>
                 </div>
             </div>
@@ -118,7 +130,7 @@
                             <h2 class="fade  ">Girls Who Code Teaching Assistant</h2>
                             <img src="pictures/girlswhocodeOLD.png" id="girlswhocode" class="fade  ">
                             <ul class="diamond texts">
-                                <li class="fade   text"> Taught game design principles and fundamentals during the 2025 Girls Who Code Summer Immersion Program </li>
+                                <li class="fade text"> Taught game design principles and fundamentals during the 2025 Girls Who Code Summer Immersion Program </li>
                                 <li class="fade   text"> Lead and mentored groups of high school girls through their development of learning the basics of programming</li>
                                 <li class="fade   text"> Inspires students as a role model, encouraging sisterhood, and showcasing how their projects can make a difference in the world</li>
                             </ul>

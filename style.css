@@ -19,6 +19,7 @@
     /* --blue1: #7785ac; */
     /* --blue2: #9ac6c5; */
     --green: #b0f8fa;
+    --pink: #c5a6eb;
     /* --green: #a5e6ba; */
 
     --fontFamily: "futura-pt", sans-serif;
@@ -391,8 +392,9 @@ ul.diamond {
 
 }
 
+
 /*------------------------------PAUSE BUTTON------------------------------*/
-#pauseButton {
+/* #pauseButton {
     position: fixed;
     top: 5%;
     right: 2%;
@@ -404,17 +406,16 @@ ul.diamond {
     display: flex;
     justify-content: center;
     align-items: center; 
-}
+} */
 
-#pauseButton:hover, #goHomeArrow:hover {
-    /* color: var(--blue2); */
+/* #pauseButton:hover, #goHomeArrow:hover {
     background-color: var(--blue1);
     cursor: var(--pointer);
-}
-
-#pauseButton i:hover {
+} */
+/* #pauseButton i:hover {
     cursor: var(--pointer);
-}
+} */
+
 
 /*------------------------------GO HOME ARROW------------------------------*/
 #goHomeArrow {
@@ -433,6 +434,11 @@ ul.diamond {
     visibility: hidden;
     opacity: 0;
     transition: all 0.5s ease-in-out;
+}
+#goHomeArrow:hover {
+    /* color: var(--blue2); */
+    background-color: var(--blue1);
+    cursor: var(--pointer);
 }
 #goHomeArrow.active {
     visibility: visible;
@@ -704,34 +710,50 @@ ul.diamond {
 }
 
 /*------------------------------TITLE------------------------------*/
-#title {
+#home {
     min-height:100dvh;
-    display:flex;
-    margin:0;
-    align-items: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;   /* vertical centering */
+    align-items: center;       /* horizontal centering */
+    position: relative;  
     text-align: center;
 }
 
-#title-content {
+/* #home #title {
+    display:flex;
+    align-items: center;
+    text-align: center;
+} */
+
+#home #title-content {
     color:var(--green);
     padding: var(--paddingAll);
     margin: 0 auto;
     overflow:auto;
 }
 
-#title h1{
+#home #title h1{
     font-size:700%;
 }
 
-#title p{
+#home #title p{
     font-size:150%;
 }
 
-#title span p {
+#home #title #welcomeTitle {
+    font-size: 200%;
+}
+
+#home #title span p {
     display: inline-block;
 }
 
-#title .titlelink {
+#home #title b{
+    color:var(--pink);
+}
+
+/* #title .titlelink {
     padding:2%;
     margin: 1%;
     background-color: var(--purple2);
@@ -740,18 +762,54 @@ ul.diamond {
 #title .titlelink:hover {
     background-color: var(--blue1);
     cursor:var(--pointer);
-}
+} */
 
 @media screen and (max-width: 600px) {
-    #title h1 {
+    #home #title h1 {
         font-size: 500%;
     }
 
-    #title p {
+    #home#title p {
         font-size:150%;
     }
 
 }
+
+/*------------------------------MENU BAR------------------------------*/
+#menuBar {
+    position: fixed;
+    top: 0;
+    z-index:2;
+    width:100%;
+    color:var(--green);
+    background-color:var(--purple1);
+    display:flex;
+}
+
+#menuBar p{
+    padding: 15px;
+}
+
+#menuBar p:hover{
+    background-color: var(--blue1);
+    cursor:var(--pointer);
+}
+
+#menuBar #pauseButton {
+    margin-left:auto;
+}
+
+#menuBar #pauseButton i:hover {
+    cursor: var(--pointer);
+}
+
+@media screen and (max-width: 600px) {
+    #menuBar p{
+        padding: 10px;
+    }
+
+}
+
 
 /*------------------------------BIO------------------------------*/
 #bio p {
@@ -763,10 +821,12 @@ ul.diamond {
     display: flex;
     justify-content: center;
     align-items: center; 
+    
 }
 
 #me {
     width:100%;
+    border-radius:50%;
 }
 
 #bio-content {

@@ -59,7 +59,9 @@ function hide(){
     
 }
 
-window.addEventListener("scroll", goHomeArrowShow);
+if (!pathname.includes('art.html')){
+  window.addEventListener("scroll", goHomeArrowShow);
+}
 //shows the go home arrow upon scroll
 function goHomeArrowShow() {
   var goHomeArrow = document.getElementById("goHomeArrow");
@@ -138,7 +140,7 @@ function pauseAnimations(){
     for (let i = 0; i < reveals.length; i++) {
       isVisible[i] = true;
     }
-    document.getElementById('pauseButton').innerHTML = '<i class="bi bi-play-circle"></i>';
+    document.getElementById('pauseButton').innerHTML = '<p><i class="bi bi-play-circle"></i></p>';
     clickedPaused = true;
   } else {
     for (var star of stars) {
@@ -161,7 +163,7 @@ function pauseAnimations(){
       isVisible[i] = false;
     }
     fadein();
-    document.getElementById('pauseButton').innerHTML = '<i class="bi bi-pause-circle"></i>';
+    document.getElementById('pauseButton').innerHTML = '<p><i class="bi bi-pause-circle"></i></p>';
     clickedPaused = false;
   }
   
