@@ -311,7 +311,7 @@ ul.diamond {
     position: fixed;
     top: 5%;
     right: 2%;
-    z-index: 2;
+    z-index: 0;
     color: var(--green);
     font-size: 150%;
     background-color:var(--blue1);
@@ -713,10 +713,8 @@ ul.diamond {
 #home {
     min-height:100dvh;
     display: flex;
-    flex-direction: column;
-    justify-content: center;   /* vertical centering */
-    align-items: center;       /* horizontal centering */
-    position: relative;  
+    justify-content: center;   
+    align-items: center;       
     text-align: center;
 }
 
@@ -728,9 +726,6 @@ ul.diamond {
 
 #home #title-content {
     color:var(--green);
-    padding: var(--paddingAll);
-    margin: 0 auto;
-    overflow:auto;
 }
 
 #home #title h1{
@@ -744,13 +739,13 @@ ul.diamond {
 #home #title #welcomeTitle {
     font-size: 200%;
 }
-
+/* 
 #home #title span p {
     display: inline-block;
-}
+} */
 
-#home #title b{
-    color:var(--pink);
+#home .titlefade {
+    width:100%;
 }
 
 /* #title .titlelink {
@@ -782,7 +777,7 @@ ul.diamond {
     z-index:2;
     width:100%;
     color:var(--green);
-    background-color:var(--purple1);
+    background-color:var(--purple2);
     display:flex;
 }
 
@@ -895,7 +890,7 @@ ul.diamond {
     right: -16px;
     top:10px;
     border-radius:50%;
-    z-index:2;
+    z-index:0;
     background-color: var(--green);
 }
 
@@ -928,12 +923,12 @@ ul.diamond {
 
 }
 
-#timeline a {
-    color: var(--blue1);
+#timeline u, #timeline a {
+    color: var(--purple1);
 }
 
-#timeline a:hover {
-    color: var(--blue2);
+#timeline u:hover, #timeline a:hover {
+    color: var(--blue1);
 }
 
 #timeline img {
