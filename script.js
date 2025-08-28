@@ -132,8 +132,7 @@ function pauseAnimations(){
         highlight.classList.add("inactive");
       }
       downArrow.classList.add("paused");
-      document.getElementById('pauseButton').innerHTML = '<p><i class="bi bi-play-circle"></i></p>';
-    
+      
       //document.getElementById('toggleOnOff').innerHTML = 'on';
     }
     for (var reveal of reveals) {
@@ -143,6 +142,8 @@ function pauseAnimations(){
       isVisible[i] = true;
     }
     clickedPaused = true;
+    document.getElementById('pauseButton').innerHTML = '<p><i class="bi bi-play-circle"></i></p>';
+    
   } else {
     for (var star of stars) {
       star.classList.remove("inactive");
@@ -155,8 +156,7 @@ function pauseAnimations(){
         highlight.classList.remove("inactive");
       }
       downArrow.classList.remove("paused");
-      document.getElementById('pauseButton').innerHTML = '<p><i class="bi bi-pause-circle"></i></p>';
-    
+      
       //document.getElementById('toggleOnOff').innerHTML = 'off';
     }
     for (var reveal of reveals) {
@@ -167,6 +167,8 @@ function pauseAnimations(){
     }
     fadein();
     clickedPaused = false;
+    document.getElementById('pauseButton').innerHTML = '<p><i class="bi bi-pause-circle"></i></p>';
+    
   }
   
 }
