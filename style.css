@@ -952,7 +952,15 @@ ul.diamond {
     display:block;
 }
 
-#timeline #girlswhocode, #timeline #pp{
+#timeline #girlswhocode {
+    width: 30%;
+}
+
+#timeline #quantum {
+    width: 80%;
+}
+
+ #timeline #pp{
     width: 50%;
 }
 
@@ -984,7 +992,7 @@ ul.diamond {
         width: 100%;
     }
 
-    #timeline #pp{
+    #timeline #pp, #timeline #girlswhocode{
         width: 70%;
     }
 }
